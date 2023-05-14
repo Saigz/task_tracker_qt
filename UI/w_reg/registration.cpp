@@ -40,3 +40,9 @@ void Registration::on_btn_SignUp_pressed()
 
 }
 
+
+void Registration::on_btn_Back_clicked()
+{
+    close();
+}
+
