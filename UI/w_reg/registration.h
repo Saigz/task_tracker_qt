@@ -18,6 +18,8 @@ public:
 private slots:
     void on_btn_SignUp_pressed();
 
+    void on_btn_Back_clicked();
+
 private:
     Ui::Registration *ui;
 };

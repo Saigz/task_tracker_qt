@@ -13,13 +13,16 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(248, 224, 255);</string>
+  </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>60</y>
-     <width>201</width>
-     <height>114</height>
+     <x>50</x>
+     <y>40</y>
+     <width>251</width>
+     <height>131</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -27,18 +30,49 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label_Name">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}</string>
+        </property>
         <property name="text">
          <string>Name</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_Name"/>
+       <widget class="QLineEdit" name="lineEdit_Name">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 11pt &quot;Montserrat SemiBold&quot;;
+}
+QLineEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+
+</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
     <item>
      <widget class="QRadioButton" name="radio_Public">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton {
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}</string>
+      </property>
       <property name="text">
        <string>Public</string>
       </property>
@@ -46,6 +80,11 @@
     </item>
     <item>
      <widget class="QRadioButton" name="radio_Private">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton {
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}</string>
+      </property>
       <property name="text">
        <string>Private</string>
       </property>
@@ -53,6 +92,25 @@
     </item>
     <item>
      <widget class="QPushButton" name="btn_Create">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+      </property>
       <property name="text">
        <string>Create</string>
       </property>

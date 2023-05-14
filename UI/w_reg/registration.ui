@@ -13,50 +13,180 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(248, 224, 255);</string>
+  </property>
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>50</y>
-     <width>251</width>
-     <height>201</height>
+     <x>40</x>
+     <y>80</y>
+     <width>332</width>
+     <height>134</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label_Login">
-        <property name="text">
-         <string>Login</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_Login">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>Login </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Password">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>Password</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_Login"/>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEdit_Login">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 11pt &quot;Montserrat SemiBold&quot;;
+}
+QLineEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_Password">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 11pt &quot;Montserrat SemiBold&quot;;
+}
+QLineEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QLabel" name="label_Password">
-        <property name="text">
-         <string>Password</string>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
         </property>
-       </widget>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_Password"/>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
       </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QPushButton" name="btn_SignUp">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+        </property>
         <property name="text">
          <string>Sign Up</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_Back">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Back</string>
         </property>
        </widget>
       </item>
