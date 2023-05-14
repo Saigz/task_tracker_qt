@@ -1,7 +1,7 @@
-#include "loginwindow.h"
+#include "UI\w_login\loginwindow.h"
 #include "ui_loginwindow.h"
-#include "decklist.h"
-#include <registration.h>
+#include "UI\w_decklist\decklist.h"
+#include <UI\w_reg\registration.h>
 
 #include <QMessageBox>
 
