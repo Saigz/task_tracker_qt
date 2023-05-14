@@ -1,7 +1,7 @@
 #ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
 
-#include "decklist.h"
+#include "UI\w_decklist\decklist.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE

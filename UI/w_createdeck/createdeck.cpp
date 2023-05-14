@@ -1,7 +1,7 @@
 #include "createdeck.h"
 #include "ui_createdeck.h"
 
-#include <QMessageBox>;
+#include <QMessageBox>
 
 CreateDeck::CreateDeck(QWidget *parent) :
     QDialog(parent),

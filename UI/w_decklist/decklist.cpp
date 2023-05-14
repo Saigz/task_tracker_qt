@@ -1,6 +1,6 @@
 #include "decklist.h"
 #include "ui_decklist.h"
-#include "createdeck.h";
+#include "UI\w_createdeck\createdeck.h"//
 
 DeckList::DeckList(QWidget *parent) :
     QMainWindow(parent),
