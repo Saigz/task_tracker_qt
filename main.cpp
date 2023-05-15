@@ -10,11 +10,11 @@
 
 int main(int argc, char *argv[])
 {
-    //    QApplication a(argc, argv);
-    //    LoginWindow w;
-    //    w.show();
+        QApplication a(argc, argv);
+        LoginWindow w;
+        w.show();
 
-    //    return a.exec();
+        return a.exec();
 
 
 //    j["Login"] = Us.Login;
@@ -32,9 +32,9 @@ int main(int argc, char *argv[])
 //    std::cout << p1.Login << std::endl << p1.Password;
 //    return 1;
 
-    Database::ParseUserData();
-    Database::UserToFile();
+//    Database::ParseUserData();
+//    Database::UserToFile();
 
 
-    return 1;
+//    return 1;
 }
