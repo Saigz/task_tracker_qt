@@ -10,7 +10,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Database/database.cpp \
+    Database\database.cpp \
     UI\w_createdeck\createdeck.cpp \
     UI\w_deck\deck.cpp \
     UI\w_decklist\decklist.cpp \
@@ -19,7 +19,9 @@ SOURCES += \
     UI\w_reg\registration.cpp
 
 HEADERS += \
-    Database/database.h \
+    nlohmann\json.hpp \
+    Database\Utility.h \
+    Database\database.h \
     UI\w_createdeck\createdeck.h \
     UI\w_deck\deck.h \
     UI\w_decklist\decklist.h \
@@ -37,3 +39,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    text.txt

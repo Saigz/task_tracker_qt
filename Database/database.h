@@ -1,59 +1,45 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
-#include "Utility.h"
+#include <string>
+#include <vector>
+#include <fstream>
+#include <iostream>
+#include "nlohmann/json.hpp"
 
 
-typedef struct User {
-
-    int Index;
-    string Login;
-    string Password;
-    string USERID;
-    int AdminFlag;
+struct User {
+    std::string Login;
+    std::string Password;
+};
 
 
-} User;
+struct Board {
+    std::vector<std::string> Owners;
 
-typedef struct Board {
-
-    string Name;
-
-
-} Board;
-
-typedef struct Column {
-
-    string Name;
-
-
-} Column;
-
-typedef struct Card {
-
-    string Name;
-    string Text;
-    int Color;
-
-} Card;
-
-class Database
-{
-public:
-    Database();
-
-    void AddUserFromString(string Buffer);
-    static void ParseUserData();
-    static void UserDataToFile();
-    static void RegUser(string Login, string Password);
-    static string FindUser(string Login, string Password);
-    static int DeleteUser(int UserIndex);
-
-    static void ParseBoardData();
-    static void BoardToFile();
-    static int DeleteData(int DataIndex);
-    static string FindBoardData(string Name);
+    //TODO
 
 };
+
+
+class Database {
+private:
+    static User CurrentUser;
+    static std::vector<User> ParsedUsers;
+
+public:
+
+    static void ParseUserData();
+    static void UserToFile();
+
+    static void FindUser();
+    static void AddUser();
+
+
+
+
+};
+
+
 
 #endif // DATABASE_H
