@@ -1,9 +1,10 @@
 #include "UI\w_login\loginwindow.h"
-#include "ui_loginwindow.h"
 #include "UI\w_decklist\decklist.h"
 #include <UI\w_reg\registration.h>
+#include "Database/database.h"
 
 #include <QMessageBox>
+#include "ui_loginwindow.h"
 
 
 LoginWindow::LoginWindow(QWidget *parent)
@@ -26,22 +27,25 @@ void LoginWindow::on_btn_SignIn_pressed()
     QString Pass = ui->lineEdit_Password->text();
 
 
-    //Input validation
+    //Needs proper input validation
     if (Login.isEmpty() or Pass.isEmpty()) {
+
         QMessageBox::warning(this, "Incorrect input", "Entered data is not valid, empty, or contains prohibited symbols: _ _ _ _ _ _");
+
     } else {
 
-        // if db.find(login, pasw) == 1;
-        if (Login == "user" and Pass == "user") {
+        int isUserExist = Database::FindUser(Login, Pass);
+        if (isUserExist == 1) {
+
             this->close();
             WindowList->show();
 
         } else {
-            QMessageBox::warning(this, "Icorrect credentials", "Incorrect password or login");
+
+            QMessageBox::warning(this, "Icorrect credentials", "This user isn't exist or your credentials is wrong");
+
         }
-
     }
-
 }
 
 

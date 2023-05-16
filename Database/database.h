@@ -1,12 +1,15 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
+#include <QString>
 #include <string>
 #include <vector>
 #include <fstream>
 #include <iostream>
+
 #include "nlohmann/json.hpp"
 
+using json = nlohmann::json;
 
 struct User {
     std::string Login;
@@ -24,18 +27,18 @@ struct Board {
 
 class Database {
 private:
-    static User CurrentUser;
-    static std::vector<User> ParsedUsers;
+
+    static json CurrentUser;
+    static json::array_t ParsedUsers;
 
 public:
 
     static void ParseUserData();
-    static void UserToFile();
+    static void UserDataToFile();
 
-    static void FindUser();
-    static void AddUser();
+    static int FindUser(QString Login, QString Password);
 
-
+    static int AddUser(QString Login, QString Password);
 
 
 };

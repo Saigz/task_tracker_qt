@@ -1,0 +1,52 @@
+{
+    "boards":
+    [
+        {
+            "BoardName": "Board1",
+            "Owners": 
+            [
+                "Login1",
+                "Login2",
+                "Login3"
+            ],
+
+            "Columns":
+            [
+                {
+                    "ColumnName": "Column1",
+                    "TextCells":
+                    [
+                        "text1",
+                        "text2"
+                        "text3_asdas",
+                        "text4",
+                    ]
+
+                },
+
+                {
+                    "ColumnName": "Column1",
+                    "TextCells":
+                    [
+                        "text1",
+                        "text2"
+                        "text3_asdas",
+                        "text4",
+                    ]
+
+                },
+
+                {
+                    "ColumnName": "Column1",
+                    "TextCells":
+                    [
+                        "text1",
+                        "text2"
+                        "text3_asdas",
+                        "text4",
+                    ]
+                }
+            ]
+        }
+    ]
+}

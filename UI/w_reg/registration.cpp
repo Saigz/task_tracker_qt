@@ -1,5 +1,6 @@
 #include "registration.h"
 #include "ui_registration.h"
+#include "Database/database.h"
 
 #include <QMessageBox>
 
@@ -21,23 +22,23 @@ void Registration::on_btn_SignUp_pressed()
     QString Password = ui->lineEdit_Password->text();
 
 
-    //db.find(login, pass)
-
     if (Login.isEmpty() or Password.isEmpty()) {
 
-        QMessageBox::warning(this, "Invalid input", "wrong syntax"); // if login&&pass not found
+        QMessageBox::warning(this, "Incorrect input", "Entered data is not valid, empty, or contains prohibited symbols: _ _ _ _ _ _");
+
     } else {
 
-        if (Login != "user") {
-            // отправить проверку в дб + занести в дб
-            QMessageBox::information(this, "кайф", "Успешно зарегистрировался"); // if login&&pass not found
+        int SuccesfullyAdded = Database::AddUser(Login, Password);
+
+        if (SuccesfullyAdded) {
+
+            QMessageBox::information(this, "кайф", "Успешно зарегистрировался");
 
         } else {
 
-            QMessageBox::warning(this, "печалька", "Занято, попутал ты чето"); // if login&&pass found
+            QMessageBox::warning(this, "печалька", "Занято, попутал ты чето");
         }
     }
-
 }
 
 
