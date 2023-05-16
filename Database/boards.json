@@ -1,52 +1,52 @@
 {
-    "boards":
-    [
+    "boards": [
         {
-            "BoardName": "Board1",
-            "Owners": 
-            [
-                "Login1",
-                "Login2",
-                "Login3"
+            "Columns": null,
+            "Name": "BAB",
+            "Owners": [
+                "BOBA"
             ],
-
-            "Columns":
-            [
-                {
-                    "ColumnName": "Column1",
-                    "TextCells":
-                    [
-                        "text1",
-                        "text2"
-                        "text3_asdas",
-                        "text4",
-                    ]
-
-                },
-
-                {
-                    "ColumnName": "Column1",
-                    "TextCells":
-                    [
-                        "text1",
-                        "text2"
-                        "text3_asdas",
-                        "text4",
-                    ]
-
-                },
-
-                {
-                    "ColumnName": "Column1",
-                    "TextCells":
-                    [
-                        "text1",
-                        "text2"
-                        "text3_asdas",
-                        "text4",
-                    ]
-                }
-            ]
+            "Type": "public"
+        },
+        {
+            "Columns": null,
+            "Name": "BIB",
+            "Owners": [
+                "BOBA"
+            ],
+            "Type": "public"
+        },
+        {
+            "Columns": null,
+            "Name": "NEWBOARD",
+            "Owners": [
+                "BOBA"
+            ],
+            "Type": "public"
+        },
+        {
+            "Columns": null,
+            "Name": "Board4",
+            "Owners": [
+                "BOBA"
+            ],
+            "Type": "public"
+        },
+        {
+            "Columns": null,
+            "Name": "ABOBUS",
+            "Owners": [
+                "BOBA"
+            ],
+            "Type": "private"
+        },
+        {
+            "Columns": null,
+            "Name": "FINALLY - PRIVATE!",
+            "Owners": [
+                "BOBA"
+            ],
+            "Type": "private"
         }
     ]
 }

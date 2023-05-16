@@ -15,15 +15,14 @@ class LoginWindow : public QMainWindow
 public:
     LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
+    static DeckList *WindowList;
 
 private slots:
     void on_btn_SignIn_pressed();
-
     void on_btn_SignUp_pressed();
 
 private:
     Ui::LoginWindow *ui;
-    DeckList *WindowList;
 };
 
 

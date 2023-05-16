@@ -1,18 +1,19 @@
 #include "UI\w_login\loginwindow.h"
 #include "UI\w_decklist\decklist.h"
 #include <UI\w_reg\registration.h>
-#include "Database/database.h"
+#include "Database\database.h"
 
 #include <QMessageBox>
 #include "ui_loginwindow.h"
 
+DeckList *LoginWindow::WindowList;
 
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginWindow)
 {
-    ui->setupUi(this);
     WindowList = new class::DeckList();
+    ui->setupUi(this);
 }
 
 LoginWindow::~LoginWindow()
@@ -36,6 +37,11 @@ void LoginWindow::on_btn_SignIn_pressed()
 
         int isUserExist = Database::FindUser(Login, Pass);
         if (isUserExist == 1) {
+
+            json User;
+            User["Login"] = Login.toStdString();
+            User["Password"] = Pass.toStdString();
+            Database::SetCurrentUser(User);
 
             this->close();
             WindowList->show();

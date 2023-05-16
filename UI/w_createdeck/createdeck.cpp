@@ -1,7 +1,14 @@
 #include "createdeck.h"
 #include "ui_createdeck.h"
+#include "Database/database.h"
+
+#include "UI\w_decklist\decklist.h"
+#include "ui_decklist.h"
+#include "UI/w_login/loginwindow.h"
 
 #include <QMessageBox>
+
+
 
 CreateDeck::CreateDeck(QWidget *parent) :
     QDialog(parent),
@@ -18,14 +25,29 @@ CreateDeck::~CreateDeck()
 
 void CreateDeck::on_btn_Create_pressed()
 {
-    QString name = ui->lineEdit_Name->text(); // name string
+    QString Name = ui->lineEdit_Name->text(); // name string
+    QString Type;
 
-    if (name == "") { // проверка в дб что имя не занято (должна быть еще проверка чтобы не было без имени)
-        // добавление в дб (надо сделать)
-
-        close();
-    } else {
-        QMessageBox::warning(this, "печалька", "Занято или не выбран тип приватности");
+    if (ui->radio_Private->isChecked()) {
+        Type = "private";
+    } else if (ui->radio_Public->isChecked()) {
+        Type = "public";
     }
+
+    if (Name.isEmpty()) {
+        QMessageBox::warning(this, "govno nabral", "иди нахуй дебил");
+    } else {
+
+        int isBoardNameAvailable = Database::CreateBoard(Name, Type);
+        if (isBoardNameAvailable) {
+            QMessageBox::warning(this, "yspex", "norm");
+        } else if (isBoardNameAvailable == 0) {
+            QMessageBox::warning(this, "govno nabral", "иди нахуй дебил");
+        }
+    }
+
+    LoginWindow::WindowList->UpdateBoards();
+
+
 }
 

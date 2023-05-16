@@ -32,26 +32,6 @@
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>
-       <item>
-        <property name="text">
-         <string>Новый элемент</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Новый элемент</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Новый элемент</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Новый элемент</string>
-        </property>
-       </item>
       </widget>
      </item>
      <item>

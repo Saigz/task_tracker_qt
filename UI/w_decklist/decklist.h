@@ -2,6 +2,8 @@
 #define DECKLIST_H
 
 #include <QMainWindow>
+#include <QListWidgetItem>
+#include <vector>
 
 namespace Ui {
 class DeckList;
@@ -14,6 +16,8 @@ class DeckList : public QMainWindow
 public:
     explicit DeckList(QWidget *parent = nullptr);
     ~DeckList();
+
+    void UpdateBoards();
 
 private slots:
     void on_btn_Open_pressed();
