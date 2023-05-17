@@ -47,14 +47,6 @@
                 "123"
             ],
             "Type": "public"
-        },
-        {
-            "Columns": null,
-            "Name": "bus",
-            "Owners": [
-                "123"
-            ],
-            "Type": "public"
         }
     ]
 }

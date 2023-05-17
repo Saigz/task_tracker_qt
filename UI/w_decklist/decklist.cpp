@@ -14,11 +14,7 @@ DeckList::DeckList(QWidget *parent) :
     ui(new Ui::DeckList)
 {
 
-<<<<<<< HEAD
     OpenedBoard = new Deck();
-=======
-    WindowDeck = new class::Deck();
->>>>>>> 93f530dfc291f046bc819d2cc51d6fdd8c31b4e9
     ui->setupUi(this);
 
 
