@@ -193,6 +193,18 @@ json Database::GetAllBoardForUser(){
 
 }
 
+void Database::ChangeBoardName(QString BoardName, QString NewBoardName)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            Board["Name"] = NewBoardName.toStdString();
+            BoardsDataToFile();
+            return;
+        }
+    }
+}
+
 void Database::ChangeBoardType(QString BoardName, QString Type)
 {
     for (auto & Board : ParsedBoards) {
@@ -266,12 +278,26 @@ void Database::RenameColumn(QString BoardName, int Index, QString NewColumnName)
     }
 }
 
+void Database::DeleteColumn(QString BoardName, int Index) {
+    int ind = 0;
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
 
-void Database::AddOwnerToBoard(QString NewOwnerLogin) {
-    CurrentBoard["Owners"].push_back(NewOwnerLogin.toStdString());
+            Board["Columns"].erase(Board["Columns"].begin() + Index);
+
+            BoardsDataToFile();
+            return;
+            ind++;
+        }
+
+    }
+}
+
+
+void Database::AddOwnerToBoard(QString BoardName, QString NewOwnerLogin) {
 
     for (auto & Board : ParsedBoards) {
-        if (Board["Name"] == CurrentBoard["Name"]) {
+        if (Board["Name"] == BoardName.toStdString()) {
             Board["Owners"].push_back(NewOwnerLogin.toStdString());
             BoardsDataToFile();
             return;

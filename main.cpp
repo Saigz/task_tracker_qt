@@ -9,17 +9,16 @@
 
 
 /*
-    We can just use json::array_t to store parsed info about boards and users instead of convering it to std::vector  (Done)
-    Not sure about json -> std::string -> qstring convertion, may be an issue
 
     TODO:
     [
 
-        Input invalidation:
-            Login pass:
-                min 4, max 15 symbols
-                only eng alphabet and this spec sybols: _ - * # $ @ & ? !
-        Boards logic))))
+        btn.pressed -> btn.clicked
+        jsnBoard and OpenedBoard does not affected by inner class changes
+
+        Card management
+        Pictures Management
+        CardColourManagament
     ]
 
 */
@@ -29,6 +28,8 @@ int main(int argc, char *argv[])
 
     Database::ParseBoardsData();
     Database::ParseUserData();
+
+    //Database::DeleteColumn("BIB", 1);
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("Fusion"));
     LoginWindow w;
