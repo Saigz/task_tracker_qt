@@ -7,6 +7,7 @@
 
 
 Deck *DeckList::WindowDeck;
+Deck *DeckList::OpenedBoard;
 
 DeckList::DeckList(QWidget *parent) :
     QMainWindow(parent),
@@ -14,6 +15,7 @@ DeckList::DeckList(QWidget *parent) :
 {
 
     WindowDeck = new class::Deck();
+    OpenedBoard = new Deck();
     ui->setupUi(this);
 
     connect(WindowDeck, &Deck::deck_list, this, &DeckList::show);
@@ -30,17 +32,24 @@ DeckList::~DeckList()
 
 void DeckList::on_btn_Open_pressed()
 {
-    // сделать проверку в дб на приватность else выдать ошибку
-    QListWidgetItem curr_item;
-    curr_item = *ui->listWidget->takeItem(ui->listWidget->currentRow()); // чет вернули хз что
-    curr_item.text(); //  string name of current item (надо как то его дать в некст окно)
 
+    QListWidgetItem curr_item;
+    curr_item = *ui->listWidget->item(ui->listWidget->currentRow());
+    curr_item.text(); //  string name of current item (надо как то его дать в некст окно)
+    QString BoardName = curr_item.text().split(" ").at(0);
+    BoardName.chop(2);
+    BoardName.remove(0, 1);
+    std::cout << BoardName.toStdString() << std::endl;
+    OpenedBoard = new Deck();
+    OpenedBoard->jsnBoard = Database::FindBoard(BoardName);
+    this->close();
+    OpenedBoard->show();
 
 }
 
 void DeckList::UpdateBoards() {
     ui->listWidget->clear();
-    for (auto Board : Database::GetParsedBoards()) {
+    for (auto Board : Database::GetAllBoardForUser()) {
 
         QString OwnersStr;
         for (auto Owner : Board["Owners"]) {
