@@ -34,7 +34,6 @@ void NewTab::addNewCell(QString cellText, QString cellName)
         newCell->setAttribute(Qt::WA_DeleteOnClose, true);
         newCell->CellNumber = cellNumberTotal;
         newCell->setTextData(cellText);
-        newCell->setCellName(cellName);
         allCellPtr.append(newCell);
         cellNumberTotal++;
 

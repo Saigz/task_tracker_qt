@@ -259,7 +259,7 @@ QPushButton:focus {
     <property name="geometry">
      <rect>
       <x>530</x>
-      <y>620</y>
+      <y>640</y>
       <width>294</width>
       <height>27</height>
      </rect>
@@ -290,6 +290,13 @@ QPushButton:focus {
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>btn_add_column</tabstop>
+  <tabstop>btn_add_column_2</tabstop>
+  <tabstop>btn_edit</tabstop>
+  <tabstop>btn_back</tabstop>
+ </tabstops>
  <resources>
   <include location="../../other/resource.qrc"/>
  </resources>

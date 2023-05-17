@@ -307,6 +307,16 @@ QRadioButton::indicator:unchecked {
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_owner</tabstop>
+  <tabstop>btn_Owner</tabstop>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>btn_Name</tabstop>
+  <tabstop>radioButton_private</tabstop>
+  <tabstop>radioButton_public</tabstop>
+  <tabstop>btn_Type</tabstop>
+  <tabstop>btn_Back</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

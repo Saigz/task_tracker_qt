@@ -1,11 +1,11 @@
 #include "createdeck.h"
 #include "ui_createdeck.h"
 #include "Database/database.h"
-
 #include "UI\w_decklist\decklist.h"
 #include "ui_decklist.h"
 #include "UI/w_login/loginwindow.h"
 
+#include <QRegularExpression>
 #include <QMessageBox>
 
 
@@ -34,7 +34,7 @@ void CreateDeck::on_btn_Create_pressed()
         Type = "public";
     }
 
-    if (Name.isEmpty()) {
+    if (Name.isEmpty() or (!Name.contains(QRegularExpression("^[0-9a-zA-Z_*#$@&?!]+$")))) {
         QMessageBox::warning(this, "govno nabral", "иди нахуй дебил");
     } else {
 
@@ -45,6 +45,7 @@ void CreateDeck::on_btn_Create_pressed()
         } else if (isBoardNameAvailable == 0) {
             QMessageBox::warning(this, "govno nabral", "иди нахуй дебил");
         }
+
     }
 
     LoginWindow::WindowList->UpdateBoards();

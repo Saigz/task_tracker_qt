@@ -1,11 +1,9 @@
 #include "UI/w_login/loginwindow.h"
+#include "ui_loginwindow.h"
 #include "UI/w_decklist/decklist.h"
 #include <UI/w_reg/registration.h>
 #include "Database/database.h"
 
-#include <QMessageBox>
-#include <QRegularExpressionValidator>
-#include "ui_loginwindow.h"
 
 DeckList *LoginWindow::WindowList;
 
@@ -29,21 +27,20 @@ LoginWindow::~LoginWindow()
 void LoginWindow::on_btn_SignIn_pressed()
 {
     QString Login = ui->lineEdit_Login->text();
-    QString Pass = ui->lineEdit_Password->text();
+    QString Password = ui->lineEdit_Password->text();
 
-    //Needs proper input validation
-    if (Login.isEmpty() or Pass.isEmpty()) {
-
-        QMessageBox::warning(this, "Incorrect input", "Entered data is not valid, empty, or contains prohibited symbols: _ _ _ _ _ _");
-
+    if (((Login.length() < 4) or (Login.length() > 15) or Login.isEmpty()) or ((Password.length() < 4) or (Password.length() > 15) or Password.isEmpty()) or
+        (!Password.contains(QRegularExpression("^[0-9a-zA-Z_*#$@&?!]+$"))) or (!Login.contains(QRegularExpression("^[0-9a-zA-Z_*#$@&?!]+$"))))
+    {
+            QMessageBox::information(this, "печалька", "Вы не правильно авторизуетесь. Минимум - 4 символа, максимум - 15. Поле должно содержать только буквы, цифры и _ * # $ @ & ? !");
     } else {
 
-        int isUserExist = Database::FindUser(Login, Pass);
+        int isUserExist = Database::FindUser(Login, Password);
         if (isUserExist == 1) {
 
             json User;
             User["Login"] = Login.toStdString();
-            User["Password"] = Pass.toStdString();
+            User["Password"] = Password.toStdString();
             Database::SetCurrentUser(User);
 
             ui->lineEdit_Login->setText("");

@@ -1,6 +1,8 @@
 #ifndef REGISTRATION_H
 #define REGISTRATION_H
 
+#include <QMessageBox>
+#include <QRegularExpression>
 #include <QDialog>
 
 namespace Ui {
