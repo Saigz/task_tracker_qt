@@ -2,6 +2,7 @@
 #include "ui_deck.h"
 #include <UI/w_cell/cell.h>
 #include <QString>
+#include <UI/w_login/loginwindow.h>
 
 Deck::Deck(QWidget *parent) :
     QMainWindow(parent),
@@ -58,9 +59,10 @@ void Deck::on_tabWidget_tabCloseRequested(int index)
     }
 }
 
-void Deck::on_btn_close_clicked()
+void Deck::on_btn_back_clicked()
 {
-    this->close();
+    close();
+    LoginWindow::WindowList->show();
 }
 
 

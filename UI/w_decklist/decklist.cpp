@@ -6,7 +6,6 @@
 #include "QMessageBox"
 
 
-Deck *DeckList::WindowDeck;
 Deck *DeckList::OpenedBoard;
 
 DeckList::DeckList(QWidget *parent) :
@@ -14,11 +13,9 @@ DeckList::DeckList(QWidget *parent) :
     ui(new Ui::DeckList)
 {
 
-    WindowDeck = new class::Deck();
     OpenedBoard = new Deck();
     ui->setupUi(this);
 
-    connect(WindowDeck, &Deck::deck_list, this, &DeckList::show);
 
     UpdateBoards();
 }

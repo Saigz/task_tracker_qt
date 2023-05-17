@@ -27,17 +27,16 @@ public:
     //json board object
     json jsnBoard;
 
-signals:
-    void deck_list();
 
 private slots:
-    void on_btn_close_clicked();
 
     void on_btn_add_column_clicked();
 
     void on_btn_add_owner_clicked();
 
     void on_tabWidget_tabCloseRequested(int index);
+
+    void on_btn_back_clicked();
 
 private:
     Ui::Deck *ui;

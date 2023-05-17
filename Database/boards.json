@@ -2,14 +2,6 @@
     "boards": [
         {
             "Columns": null,
-            "Name": "BAB",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": null,
             "Name": "BIB",
             "Owners": [
                 "BOBA"
