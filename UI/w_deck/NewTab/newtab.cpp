@@ -1,6 +1,9 @@
 #include "newtab.h"
 #include "ui_newtab.h"
+#include "UI/w_decklist/decklist.h"
+#include "UI/w_deck/deck.h"
 
+#include "QMessageBox"
 
 NewTab::NewTab(QWidget *parent) :
     QWidget(parent),
@@ -22,15 +25,21 @@ void NewTab::on_pushButton_clicked()
 
 void NewTab::addNewCell(QString cellText, QString cellName)
 {
-    NewCell *newCell = new NewCell(this);
-    ui->cellLayout->addWidget(newCell, cellNumberTotal, 0);
-    connect(newCell,SIGNAL(closeThisCell(int)),this,SLOT(closeCell(int)));
-    newCell->setAttribute(Qt::WA_DeleteOnClose, true);
-    newCell->CellNumber = cellNumberTotal;
-    newCell->setTextData(cellText);
-    newCell->setCellName(cellName);
-    allCellPtr.append(newCell);
-    cellNumberTotal++;
+    if (cellNumberTotal == 4) {
+        QMessageBox::warning(this, "Cant create", "Too much cards, maximum 4");
+    } else {
+        NewCell *newCell = new NewCell(this);
+        ui->cellLayout->addWidget(newCell, cellNumberTotal, 0);
+        connect(newCell,SIGNAL(closeThisCell(int)),this,SLOT(closeCell(int)));
+        newCell->setAttribute(Qt::WA_DeleteOnClose, true);
+        newCell->CellNumber = cellNumberTotal;
+        newCell->setTextData(cellText);
+        newCell->setCellName(cellName);
+        allCellPtr.append(newCell);
+        cellNumberTotal++;
+
+        DeckList::OpenedBoard->setMaxCardLabel(cellNumberTotal);
+    }
 }
 
 void NewTab::closeCell(int index)
@@ -41,4 +50,5 @@ void NewTab::closeCell(int index)
     }
     cellNumberTotal--;
     allCellPtr.remove(index);
+    DeckList::OpenedBoard->setMaxCardLabel(cellNumberTotal);
 }
