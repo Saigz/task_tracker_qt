@@ -39,6 +39,22 @@
                 "BOBA"
             ],
             "Type": "private"
+        },
+        {
+            "Columns": null,
+            "Name": "фывфыв",
+            "Owners": [
+                "123"
+            ],
+            "Type": ""
+        },
+        {
+            "Columns": null,
+            "Name": "asdasdasd",
+            "Owners": [
+                "123"
+            ],
+            "Type": "private"
         }
     ]
 }

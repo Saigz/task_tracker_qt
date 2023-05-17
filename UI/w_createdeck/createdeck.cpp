@@ -34,7 +34,7 @@ void CreateDeck::on_btn_Create_pressed()
         Type = "public";
     }
 
-    if (Name.isEmpty()) {
+    if (Name.isEmpty() or (!ui->radio_Private->isChecked() and !ui->radio_Public->isChecked())) {
         QMessageBox::warning(this, "govno nabral", "иди нахуй дебил");
     } else {
 
