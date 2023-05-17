@@ -1,5 +1,6 @@
 #include "decklist.h"
 #include "ui_decklist.h"
+#include "ui_deck.h"
 #include "UI\w_createdeck\createdeck.h"
 #include "UI\w_deck\deck.h"
 #include "Database/database.h"
@@ -13,7 +14,11 @@ DeckList::DeckList(QWidget *parent) :
     ui(new Ui::DeckList)
 {
 
+<<<<<<< HEAD
     OpenedBoard = new Deck();
+=======
+    WindowDeck = new class::Deck();
+>>>>>>> 93f530dfc291f046bc819d2cc51d6fdd8c31b4e9
     ui->setupUi(this);
 
 
@@ -27,9 +32,8 @@ DeckList::~DeckList()
 }
 
 
-void DeckList::on_btn_Open_pressed()
+void DeckList::on_btn_Open_clicked()
 {
-
     QListWidgetItem curr_item;
     curr_item = *ui->listWidget->item(ui->listWidget->currentRow());
     curr_item.text(); //  string name of current item (надо как то его дать в некст окно)
@@ -37,11 +41,23 @@ void DeckList::on_btn_Open_pressed()
     BoardName.chop(2);
     BoardName.remove(0, 1);
     std::cout << BoardName.toStdString() << std::endl;
+
+
     OpenedBoard = new Deck();
-    OpenedBoard->jsnBoard = Database::FindBoard(BoardName);
+    json Board = Database::FindBoard(BoardName);
+    OpenedBoard->jsnBoard = Board;
+
+
+    QString BoardOwners;
+    for (auto Owners : Board["Owners"]) {
+        BoardOwners += QString::fromStdString(Owners) + " ";
+    }
+
+    std::cout << Board["Name"] << "  " <<  Board["Type"] << "  " <<  BoardOwners.toStdString() << std::endl;
+    OpenedBoard->setInfoLabels(QString::fromStdString(Board["Name"]), QString::fromStdString(Board["Type"]), BoardOwners);
+
     this->close();
     OpenedBoard->show();
-
 }
 
 void DeckList::UpdateBoards() {
@@ -91,5 +107,8 @@ void DeckList::on_btn_Exit_pressed()
     close();
     emit login_window(); // back to loginwindow
 }
+
+
+
 
 

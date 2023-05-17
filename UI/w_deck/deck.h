@@ -27,6 +27,13 @@ public:
     //json board object
     json jsnBoard;
 
+<<<<<<< HEAD
+=======
+    void setInfoLabels(QString Name, QString Type, QString Owners);
+
+signals:
+    void deck_list();
+>>>>>>> 93f530dfc291f046bc819d2cc51d6fdd8c31b4e9
 
 private slots:
 

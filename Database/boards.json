@@ -34,14 +34,6 @@
         },
         {
             "Columns": null,
-            "Name": "хуяня",
-            "Owners": [
-                "123"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": null,
             "Name": "BOB",
             "Owners": [
                 "123"
@@ -51,6 +43,14 @@
         {
             "Columns": null,
             "Name": "ABOBA",
+            "Owners": [
+                "123"
+            ],
+            "Type": "public"
+        },
+        {
+            "Columns": null,
+            "Name": "bus",
             "Owners": [
                 "123"
             ],
