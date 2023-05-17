@@ -193,6 +193,79 @@ json Database::GetAllBoardForUser(){
 
 }
 
+void Database::ChangeBoardType(QString BoardName, QString Type)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            Board["Type"] = Type.toStdString();
+            BoardsDataToFile();
+            return;
+        }
+    }
+}
+
+
+void Database::AddNewColumn(QString BoardName, QString ColumnName)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+
+
+            json NewColumn;
+            NewColumn["ColumnName"] = ColumnName.toStdString();
+            NewColumn["Cards"];
+            Board["Columns"].push_back(NewColumn);
+            CurrentBoard["Columns"].push_back(NewColumn);
+            BoardsDataToFile();
+            return;
+
+        }
+    }
+}
+
+
+void Database::AddNewCardToColumn(QString BoardName, QString ColumnName, QString Text)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+
+            for (auto & Column : Board["Columns"]) {
+                if (Column["ColumnName"] == ColumnName.toStdString()) {
+
+                    //std::cout << Column["Cards"];
+                    Column["Cards"].push_back(Text.toStdString());
+                    BoardsDataToFile();
+                    return;
+                }
+            }
+            return;
+        }
+    }
+}
+
+void Database::RenameColumn(QString BoardName, int Index, QString NewColumnName)
+{
+    int ind = 0;
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            for (auto & i : Board["Columns"]) {
+                if (Index == ind) {
+                    std::cout << i["ColumnName"] << "  " << NewColumnName.toStdString() << std::endl;
+                    i["ColumnName"] = NewColumnName.toStdString();
+                    BoardsDataToFile();
+                    return;
+                }
+                ind++;
+            }
+
+        }
+    }
+}
+
 
 void Database::AddOwnerToBoard(QString NewOwnerLogin) {
     CurrentBoard["Owners"].push_back(NewOwnerLogin.toStdString());
