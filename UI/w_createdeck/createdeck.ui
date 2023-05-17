@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>TaskManager</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../../other/resource.qrc">
+    <normaloff>:/res/windows.ico</normaloff>:/res/windows.ico</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(254, 200, 255);</string>
   </property>
@@ -184,6 +188,8 @@ QPushButton:focus {
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../other/resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
