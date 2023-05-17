@@ -34,14 +34,6 @@
         },
         {
             "Columns": null,
-            "Name": "ABOBU",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "private"
-        },
-        {
-            "Columns": null,
             "Name": "OBO",
             "Owners": [
                 "BOBA"
@@ -50,7 +42,7 @@
         },
         {
             "Columns": null,
-            "Name": "new",
+            "Name": "хуяня",
             "Owners": [
                 "123"
             ],
@@ -58,19 +50,11 @@
         },
         {
             "Columns": null,
-            "Name": "2",
+            "Name": "BOB",
             "Owners": [
                 "123"
             ],
-            "Type": "public"
+            "Type": "private"
         },
-        {
-            "Columns": null,
-            "Name": "New",
-            "Owners": [
-                "123"
-            ],
-            "Type": "public"
-        }
     ]
 }

@@ -34,13 +34,14 @@ void CreateDeck::on_btn_Create_pressed()
         Type = "public";
     }
 
-    if (Name.isEmpty() or (!ui->radio_Private->isChecked() and !ui->radio_Public->isChecked())) {
+    if (Name.isEmpty()) {
         QMessageBox::warning(this, "govno nabral", "иди нахуй дебил");
     } else {
 
         int isBoardNameAvailable = Database::CreateBoard(Name, Type);
         if (isBoardNameAvailable) {
             QMessageBox::warning(this, "yspex", "norm");
+            close();
         } else if (isBoardNameAvailable == 0) {
             QMessageBox::warning(this, "govno nabral", "иди нахуй дебил");
         }

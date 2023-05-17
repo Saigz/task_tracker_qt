@@ -6,6 +6,7 @@
 #include <fstream>
 #include <string>
 
+
 /*
     We can just use json::array_t to store parsed info about boards and users instead of convering it to std::vector  (Done)
     Not sure about json -> std::string -> qstring convertion, may be an issue
@@ -29,8 +30,6 @@ int main(int argc, char *argv[])
 //    NewDeck.show();
 //    return a.exec();
 
-
-//    return 1;
     Database::ParseBoardsData();
     Database::ParseUserData();
     QApplication a(argc, argv);
