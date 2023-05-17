@@ -6,15 +6,18 @@
                     "Cards": [
                         "12345",
                         "213123",
-                        "312"
+                        "312",
+                        "132"
                     ],
-                    "ColumnName": "FirstCol"
+                    "ColumnName": "HUY"
                 },
                 {
                     "Cards": [
                         "12345",
                         "213123",
-                        "312"
+
+                        "312",
+                        "newcardtext"
                     ],
                     "ColumnName": "SecondCol"
                 },
@@ -25,6 +28,13 @@
                         "312"
                     ],
                     "ColumnName": "ThirdCol"
+                },
+                {
+                    "Cards": [
+                        "TEXT",
+                        "TEXT"
+                    ],
+                    "ColumnName": "THISISNEWCOLUMN"
                 }
             ],
             "Name": "BIB",
@@ -35,7 +45,12 @@
             "Type": "public"
         },
         {
-            "Columns": null,
+            "Columns": [
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                }
+            ],
             "Name": "NEWBOARD",
             "Owners": [
                 "BOBA"
@@ -43,15 +58,33 @@
             "Type": "public"
         },
         {
-            "Columns": null,
-            "Name": "FINALLY - PRIVATE!",
+            "Columns": [
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                },
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                },
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                }
+            ],
+            "Name": "FINALLYPRIVATE!",
             "Owners": [
                 "BOBA"
             ],
             "Type": "private"
         },
         {
-            "Columns": null,
+            "Columns": [
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                }
+            ],
             "Name": "OBO",
             "Owners": [
                 "BOBA"
@@ -59,7 +92,12 @@
             "Type": "private"
         },
         {
-            "Columns": null,
+            "Columns": [
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                }
+            ],
             "Name": "BOB",
             "Owners": [
                 "123"
@@ -67,7 +105,12 @@
             "Type": "private"
         },
         {
-            "Columns": null,
+            "Columns": [
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                }
+            ],
             "Name": "ABOBA",
             "Owners": [
                 "123"
@@ -75,8 +118,14 @@
             "Type": "public"
         },
         {
-            "Columns": null,
-            "Name": "test",
+
+            "Columns": [
+                {
+                    "Cards": null,
+                    "ColumnName": "bab"
+                }
+            ],
+            "Name": "New123Desk",
             "Owners": [
                 "123"
             ],
