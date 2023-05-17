@@ -56,5 +56,13 @@
             ],
             "Type": "private"
         },
+        {
+            "Columns": null,
+            "Name": "ABOBA",
+            "Owners": [
+                "123"
+            ],
+            "Type": "public"
+        }
     ]
 }

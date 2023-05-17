@@ -26,8 +26,8 @@
    <string>TaskManager</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../../../../../Downloads/browser-21_icon-icons.com_62177 (1).ico</normaloff>../../../../../Downloads/browser-21_icon-icons.com_62177 (1).ico</iconset>
+   <iconset resource="../../other/resource.qrc">
+    <normaloff>:/res/windows.ico</normaloff>:/res/windows.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(254, 200, 255);</string>
@@ -193,7 +193,8 @@ QPushButton:focus {
           <string>Sign up</string>
          </property>
          <property name="icon">
-          <iconset theme="face-smile-big"/>
+          <iconset theme="face-smile-big">
+           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>
@@ -203,6 +204,8 @@ QPushButton:focus {
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../other/resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

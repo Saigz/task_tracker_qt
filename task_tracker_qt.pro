@@ -33,7 +33,6 @@ HEADERS += \
     UI/w_reg/registration.h
 
 FORMS += \
-    UI/w_cell/cell.ui \
     UI/w_deck/NewCell/newcell.ui \
     UI/w_deck/NewTab/newtab.ui \
     UI/w_createdeck/createdeck.ui \
@@ -53,4 +52,3 @@ DISTFILES += \
 RESOURCES += \
     other/resource.qrc
 
-RC_FILE += "other/test.rc"
