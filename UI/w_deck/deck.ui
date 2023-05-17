@@ -223,7 +223,7 @@ QPushButton:focus {
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="btn_add_column_2">
+   <widget class="QPushButton" name="btn_rename_tab">
     <property name="geometry">
      <rect>
       <x>250</x>

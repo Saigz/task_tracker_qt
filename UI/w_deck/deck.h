@@ -44,13 +44,13 @@ private slots:
 
     void on_btn_add_column_clicked();
 
-    void on_btn_add_owner_clicked();
-
     void on_tabWidget_tabCloseRequested(int index);
 
     void on_btn_back_clicked();
 
     void on_btn_edit_clicked();
+
+    void on_btn_rename_tab_clicked();
 
 private:
     Ui::Deck *ui;

@@ -26,10 +26,6 @@
 
 int main(int argc, char *argv[])
 {
-//    QApplication a(argc, argv);
-//    Deck NewDeck;
-//    NewDeck.show();
-//    return a.exec();
 
     Database::ParseBoardsData();
     Database::ParseUserData();
