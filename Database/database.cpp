@@ -116,12 +116,12 @@ void Database::BoardsDataToFile() {
 }
 
 
-int Database::FindBoard(QString Name) {
+json Database::FindBoard(QString Name) {
     for (auto Board : ParsedBoards) {
         std::cout << Board["Name"]  << "  " << Name.toStdString() << std::endl;
         if (Board["Name"] == Name.toStdString()) {
             std::cout << "Find full match" << std::endl;
-            return 0;
+            return Board;
         }
     }
     std::cout << "Cant find this board" << std::endl;
@@ -131,7 +131,7 @@ int Database::FindBoard(QString Name) {
 
 int Database::CreateBoard(QString Name, QString Type) {
     std::cout << "Initializing board creation..." << std::endl;
-    int IsNameAvailable = FindBoard(Name);
+    json IsNameAvailable = FindBoard(Name);
     if (IsNameAvailable == 1) {
 
         json NewBoard;

@@ -1,7 +1,7 @@
-#include "UI\w_login\loginwindow.h"
-#include "UI\w_decklist\decklist.h"
-#include <UI\w_reg\registration.h>
-#include "Database\database.h"
+#include "UI/w_login/loginwindow.h"
+#include "UI/w_decklist/decklist.h"
+#include <UI/w_reg/registration.h>
+#include "Database/database.h"
 
 #include <QMessageBox>
 #include <QRegularExpressionValidator>
