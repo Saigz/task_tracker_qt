@@ -34,7 +34,7 @@
         },
         {
             "Columns": null,
-            "Name": "ABOBU",
+            "Name": "OBO",
             "Owners": [
                 "BOBA"
             ],
@@ -42,11 +42,19 @@
         },
         {
             "Columns": null,
-            "Name": "OBO",
+            "Name": "хуяня",
             "Owners": [
-                "BOBA"
+                "123"
             ],
-            "Type": "private"
+            "Type": "public"
+        },
+        {
+            "Columns": null,
+            "Name": "sdfjdghjjjdg",
+            "Owners": [
+                "123"
+            ],
+            "Type": "public"
         }
     ]
 }

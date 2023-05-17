@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1004</width>
-    <height>598</height>
+    <width>1170</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -18,22 +18,22 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>1004</width>
-    <height>598</height>
+    <width>1170</width>
+    <height>700</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>LoginWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(248, 224, 255);</string>
+   <string notr="true">background-color: rgb(254, 200, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>190</y>
+      <x>430</x>
+      <y>280</y>
       <width>332</width>
       <height>168</height>
      </rect>
@@ -75,7 +75,7 @@
           <widget class="QLineEdit" name="lineEdit_Login">
            <property name="styleSheet">
             <string notr="true">QLineEdit {
-	border: 2px solid rgb(104, 104, 104);
+	border: 2px solid rgb(156, 132, 192);
 	border-radius: 8px;
 	padding-left: auto;
     padding-right: auto;
@@ -87,7 +87,7 @@ QLineEdit:hover {
 	border: 2px solid rgb(48, 50, 62);
 }
 QLineEdit:focus {
-	border: 2px solid rgb(85, 170, 255);
+	border: 2px solid rgb(48, 50, 62);
 	background-color: rgb(43, 45, 56);
 }
 
@@ -105,7 +105,7 @@ QLineEdit:focus {
           <widget class="QLineEdit" name="lineEdit_Password">
            <property name="styleSheet">
             <string notr="true">QLineEdit {
-	border: 2px solid rgb(104, 104, 104);
+	border: 2px solid rgb(156, 132, 192);
 	border-radius: 8px;
 	padding-left: auto;
     padding-right: auto;
@@ -117,9 +117,10 @@ QLineEdit:hover {
 	border: 2px solid rgb(48, 50, 62);
 }
 QLineEdit:focus {
-	border: 2px solid rgb(85, 170, 255);
+	border: 2px solid rgb(48, 50, 62);
 	background-color: rgb(43, 45, 56);
 }
+
 
 </string>
            </property>
@@ -138,38 +139,25 @@ QLineEdit:focus {
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <widget class="QPushButton" name="btn_SignIn">
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
          </property>
          <property name="text">
           <string>Sign in</string>
@@ -180,22 +168,22 @@ QPushButton:focus {
         <widget class="QPushButton" name="btn_SignUp">
          <property name="styleSheet">
           <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-border-color: rgb(32, 255, 210);</string>
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
          </property>
          <property name="text">
           <string>Sign up</string>
@@ -207,7 +195,6 @@ border-color: rgb(32, 255, 210);</string>
     </layout>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

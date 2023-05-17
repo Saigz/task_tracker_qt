@@ -33,6 +33,7 @@ private slots:
 
     void on_btn_Exit_pressed();
 
+
 private:
     Ui::DeckList *ui;
 };

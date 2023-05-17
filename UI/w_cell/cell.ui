@@ -6,28 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>611</width>
-    <height>466</height>
+    <width>1170</width>
+    <height>700</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1170</width>
+    <height>700</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(248, 224, 255);</string>
+   <string notr="true">background-color: rgb(254, 200, 255);</string>
   </property>
   <widget class="QLineEdit" name="Header">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
+     <x>280</x>
+     <y>120</y>
      <width>161</width>
      <height>51</height>
     </rect>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>1170</width>
+     <height>700</height>
+    </size>
+   </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit {
-	border: 2px solid rgb(104, 104, 104);
+	border: 2px solid rgb(156, 132, 192);
 	border-radius: 8px;
 	padding-left: auto;
     padding-right: auto;
@@ -39,9 +51,10 @@ QLineEdit:hover {
 	border: 2px solid rgb(48, 50, 62);
 }
 QLineEdit:focus {
-	border: 2px solid rgb(85, 170, 255);
+	border: 2px solid rgb(48, 50, 62);
 	background-color: rgb(43, 45, 56);
 }
+
 
 </string>
    </property>
@@ -58,15 +71,15 @@ QLineEdit:focus {
   <widget class="QPlainTextEdit" name="Text">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>70</y>
+     <x>280</x>
+     <y>180</y>
      <width>571</width>
      <height>301</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPlainTextEdit {
-	border: 2px solid rgb(104, 104, 104);
+	border: 2px solid rgb(156, 132, 192);
 	border-radius: 8px;
 	padding-left: auto;
     padding-right: auto;
@@ -74,13 +87,14 @@ QLineEdit:focus {
 	background-color: rgb(27, 29, 35);
 	font: 600 11pt &quot;Montserrat SemiBold&quot;;
 }
-QPlainTextEdit:hover {
+QLineEdit:hover {
 	border: 2px solid rgb(48, 50, 62);
 }
-QPlainTextEdit:focus {
-	border: 2px solid rgb(85, 170, 255);
+QLineEdit:focus {
+	border: 2px solid rgb(48, 50, 62);
 	background-color: rgb(43, 45, 56);
 }
+
 
 </string>
    </property>
@@ -94,8 +108,8 @@ QPlainTextEdit:focus {
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>10</y>
+     <x>600</x>
+     <y>120</y>
      <width>251</width>
      <height>51</height>
     </rect>
@@ -127,13 +141,13 @@ QPlainTextEdit:focus {
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>380</y>
+     <x>280</x>
+     <y>490</y>
      <width>571</width>
-     <height>61</height>
+     <height>63</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -143,22 +157,22 @@ QPlainTextEdit:focus {
        <widget class="QPushButton" name="btn_Change_User">
         <property name="styleSheet">
          <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+ background-color: rgb(109, 86, 154);
+}</string>
         </property>
         <property name="text">
          <string>Change User</string>
@@ -169,22 +183,22 @@ QPushButton:focus {
        <widget class="QPushButton" name="btn_change_column">
         <property name="styleSheet">
          <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+ background-color: rgb(109, 86, 154);
+}</string>
         </property>
         <property name="text">
          <string>Change Column</string>
@@ -199,22 +213,22 @@ QPushButton:focus {
        <widget class="QPushButton" name="btn_Save">
         <property name="styleSheet">
          <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+ background-color: rgb(109, 86, 154);
+}</string>
         </property>
         <property name="text">
          <string>Save</string>
@@ -225,22 +239,22 @@ QPushButton:focus {
        <widget class="QPushButton" name="btn_back">
         <property name="styleSheet">
          <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+ background-color: rgb(109, 86, 154);
+}</string>
         </property>
         <property name="text">
          <string>Back</string>
