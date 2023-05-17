@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <QStyleFactory>
 
 
 /*
@@ -33,6 +34,7 @@ int main(int argc, char *argv[])
     Database::ParseBoardsData();
     Database::ParseUserData();
     QApplication a(argc, argv);
+    a.setStyle(QStyleFactory::create("Fusion"));
     LoginWindow w;
     w.show();
     return a.exec();

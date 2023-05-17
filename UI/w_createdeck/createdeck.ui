@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>369</width>
-    <height>236</height>
+    <width>354</width>
+    <height>278</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>40</y>
+     <y>70</y>
      <width>251</width>
      <height>176</height>
     </rect>
@@ -36,6 +36,7 @@
        <widget class="QLabel" name="label_Name">
         <property name="styleSheet">
          <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
 	font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }</string>
         </property>
@@ -77,6 +78,7 @@ QLineEdit:focus {
      <widget class="QRadioButton" name="radio_Public">
       <property name="styleSheet">
        <string notr="true">QRadioButton {
+ color: rgb(0, 0, 0);
 	font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QRadioButton::indicator:checked {
@@ -109,6 +111,7 @@ QRadioButton::indicator:hover {
      <widget class="QRadioButton" name="radio_Private">
       <property name="styleSheet">
        <string notr="true">QRadioButton {
+ color: rgb(0, 0, 0);
 	font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QRadioButton::indicator:checked {
@@ -186,6 +189,28 @@ QPushButton:focus {
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	 color: rgb(0, 0, 0);
+	font: 800 22pt &quot;Montserrat ExtraBold&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>New Desk</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources>

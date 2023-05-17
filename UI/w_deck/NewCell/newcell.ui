@@ -86,6 +86,7 @@ QTextEdit:focus {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
+	 color: rgb(0, 0, 0);
 	font: 600 10pt &quot;Montserrat SemiBold&quot;;
 }</string>
    </property>
