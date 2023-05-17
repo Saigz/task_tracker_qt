@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(248, 224, 255);</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -80,6 +80,9 @@ QLineEdit:focus {
 
 </string>
           </property>
+          <property name="maxLength">
+           <number>12</number>
+          </property>
          </widget>
         </item>
         <item>
@@ -103,6 +106,9 @@ QLineEdit:focus {
 }
 
 </string>
+          </property>
+          <property name="maxLength">
+           <number>12</number>
           </property>
          </widget>
         </item>
