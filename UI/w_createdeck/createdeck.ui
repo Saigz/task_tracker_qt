@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>TaskManager</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(254, 200, 255);</string>
@@ -87,7 +87,7 @@ QRadioButton::indicator:unchecked {
 	border-radius: 6px;
 }
 QRadioButton::indicator:hover {
-    background-color: rgb(220, 94, 255) ;
+    background-color: rgb(215, 0, 222);
     border: 2px solid white;
 	border-radius: 6px;
 }

@@ -23,7 +23,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>LoginWindow</string>
+   <string>TaskManager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../../Downloads/browser-21_icon-icons.com_62177 (1).ico</normaloff>../../../../../Downloads/browser-21_icon-icons.com_62177 (1).ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(254, 200, 255);</string>
@@ -187,6 +191,9 @@ QPushButton:focus {
          </property>
          <property name="text">
           <string>Sign up</string>
+         </property>
+         <property name="icon">
+          <iconset theme="face-smile-big"/>
          </property>
         </widget>
        </item>

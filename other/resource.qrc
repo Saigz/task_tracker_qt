@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>windows.ico</file>
+    </qresource>
+</RCC>
