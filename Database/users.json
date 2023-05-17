@@ -35,6 +35,10 @@
         {
             "Login": "ABOBA",
             "Password": "ABOBA"
+        },
+        {
+            "Login": "1234",
+            "Password": "1234"
         }
     ]
 }
