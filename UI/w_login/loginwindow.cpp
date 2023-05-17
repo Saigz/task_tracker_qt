@@ -16,6 +16,8 @@ LoginWindow::LoginWindow(QWidget *parent)
     WindowList = new class::DeckList();
     ui->setupUi(this);
     connect(WindowList, &DeckList::login_window, this, &LoginWindow::show);
+
+
 }
 
 LoginWindow::~LoginWindow()
