@@ -29,7 +29,7 @@
    <string notr="true">background-color: rgb(248, 224, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -93,6 +93,12 @@ QLineEdit:focus {
 
 </string>
            </property>
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
           </widget>
          </item>
          <item>
@@ -116,6 +122,12 @@ QLineEdit:focus {
 }
 
 </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
            </property>
           </widget>
          </item>

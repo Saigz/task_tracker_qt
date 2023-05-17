@@ -15,6 +15,12 @@ public:
     explicit Deck(QWidget *parent = nullptr);
     ~Deck();
 
+signals:
+    void deck_list();
+
+private slots:
+    void on_btn_close_clicked();
+
 private:
     Ui::Deck *ui;
 };

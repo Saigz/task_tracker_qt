@@ -11,6 +11,7 @@ CONFIG += c++17
 
 SOURCES += \
     Database\database.cpp \
+    UI/w_cell/cell.cpp \
     UI\w_createdeck\createdeck.cpp \
     UI\w_deck\deck.cpp \
     UI\w_decklist\decklist.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
     UI\w_reg\registration.cpp
 
 HEADERS += \
+    UI/w_cell/cell.h \
     nlohmann\json.hpp \
     Database\Utility.h \
     Database\database.h \
@@ -29,6 +31,7 @@ HEADERS += \
     UI\w_reg\registration.h
 
 FORMS += \
+    UI/w_cell/cell.ui \
     UI\w_createdeck\createdeck.ui \
     UI\w_deck\deck.ui \
     UI\w_decklist\decklist.ui \

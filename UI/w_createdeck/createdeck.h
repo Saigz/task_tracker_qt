@@ -18,6 +18,8 @@ public:
 private slots:
     void on_btn_Create_pressed();
 
+    void on_btn_back_clicked();
+
 private:
     Ui::CreateDeck *ui;
 };
