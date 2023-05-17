@@ -50,6 +50,16 @@ void BoardEdit::on_btn_Type_clicked()
 
 void BoardEdit::on_btn_Back_clicked()
 {
+    QString Type;
+
+    if (ui->radioButton_private->isChecked()) {
+        Type = "private";
+    } else if (ui->radioButton_public->isChecked()) {
+        Type = "public";
+    }
+
+    // db code
+
+
     close();
 }
-

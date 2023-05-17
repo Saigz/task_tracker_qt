@@ -15,7 +15,6 @@
                     "Cards": [
                         "12345",
                         "213123",
-
                         "312",
                         "newcardtext"
                     ],
@@ -61,7 +60,7 @@
             "Columns": [
                 {
                     "Cards": null,
-                    "ColumnName": "NewColumn"
+                    "ColumnName": "sad"
                 },
                 {
                     "Cards": null,
@@ -118,7 +117,6 @@
             "Type": "public"
         },
         {
-
             "Columns": [
                 {
                     "Cards": null,
