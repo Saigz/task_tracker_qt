@@ -3,28 +3,28 @@
         {
             "Columns": [
                 {
-                    "ColumnName": "FirstCol",
                     "Cards": [
                         "12345",
                         "213123",
                         "312"
-                    ]
+                    ],
+                    "ColumnName": "FirstCol"
                 },
                 {
-                    "ColumnName": "SecondCol",
                     "Cards": [
                         "12345",
                         "213123",
                         "312"
-                    ]
+                    ],
+                    "ColumnName": "SecondCol"
                 },
                 {
-                    "ColumnName": "ThirdCol",
                     "Cards": [
                         "12345",
                         "213123",
                         "312"
-                    ]
+                    ],
+                    "ColumnName": "ThirdCol"
                 }
             ],
             "Name": "BIB",
@@ -69,6 +69,30 @@
         {
             "Columns": null,
             "Name": "ABOBA",
+            "Owners": [
+                "123"
+            ],
+            "Type": "public"
+        },
+        {
+            "Columns": null,
+            "Name": "test",
+            "Owners": [
+                "123"
+            ],
+            "Type": "private"
+        },
+        {
+            "Columns": null,
+            "Name": "adsfcax",
+            "Owners": [
+                "123"
+            ],
+            "Type": "private"
+        },
+        {
+            "Columns": null,
+            "Name": "123",
             "Owners": [
                 "123"
             ],

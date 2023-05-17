@@ -12,7 +12,6 @@ Deck::Deck(QWidget *parent) :
     ui(new Ui::Deck)
 {
     ui->setupUi(this);
-
 }
 
 Deck::~Deck()

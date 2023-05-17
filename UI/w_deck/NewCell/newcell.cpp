@@ -1,5 +1,6 @@
 #include "newcell.h"
 #include "ui_newcell.h"
+#include "UI/w_boardedit/boardedit.h"
 
 NewCell::NewCell(QWidget *parent) :
     QWidget(parent),
@@ -38,5 +39,15 @@ void NewCell::on_deleteButton_clicked()
 void NewCell::on_clearButton_clicked()
 {
     ui->textEdit->clear();
+}
+
+
+void NewCell::on_editLabelButton_clicked()
+{
+//    OpenedBoard->close();
+    BoardEdit z;
+    z.setModal(true);
+    z.exec();
+
 }
 
