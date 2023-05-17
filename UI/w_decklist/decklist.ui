@@ -51,6 +51,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QListWidget {
+	 color: rgb(0, 0, 0);
 	border: 2px solid rgb(187, 159, 207);
 }
 QListWidget::item:hover {
@@ -226,6 +227,28 @@ QPushButton:focus {
     </property>
     <property name="text">
      <string>Unlogin</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>641</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	 color: rgb(0, 0, 0);
+	font: 800 28pt &quot;Montserrat ExtraBold&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Desks</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

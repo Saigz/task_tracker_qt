@@ -22,7 +22,7 @@
      <x>40</x>
      <y>80</y>
      <width>332</width>
-     <height>155</height>
+     <height>174</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -34,6 +34,7 @@
          <widget class="QLabel" name="label_Login">
           <property name="styleSheet">
            <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
 	font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }</string>
           </property>
@@ -46,6 +47,7 @@
          <widget class="QLabel" name="label_Password">
           <property name="styleSheet">
            <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
 	font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }</string>
           </property>
@@ -122,32 +124,6 @@ QLineEdit:focus {
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
        <widget class="QPushButton" name="btn_SignUp">
         <property name="styleSheet">
          <string notr="true">QPushButton {
@@ -165,7 +141,6 @@ QPushButton:hover {
 }
 QPushButton:focus {
  border: 2px solid rgb(109, 86, 154);
- background-color: rgb(109, 86, 154);
 }</string>
         </property>
         <property name="text">
@@ -191,7 +166,6 @@ QPushButton:hover {
 }
 QPushButton:focus {
  border: 2px solid rgb(109, 86, 154);
- background-color: rgb(109, 86, 154);
 }</string>
         </property>
         <property name="text">
@@ -202,6 +176,28 @@ QPushButton:focus {
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>331</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	 color: rgb(0, 0, 0);
+	font: 800 22pt &quot;Montserrat ExtraBold&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>Registration</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources/>

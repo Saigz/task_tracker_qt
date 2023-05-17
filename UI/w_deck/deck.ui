@@ -33,8 +33,36 @@
       <x>10</x>
       <y>30</y>
       <width>1201</width>
-      <height>591</height>
+      <height>601</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat SemiBold</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget {
+	 color: rgb(0, 0, 0);
+}
+QTabWidget::pane {
+  border: 1px solid dark;
+  top:-1px; 
+  background: rgb(245, 245, 245);
+} 
+
+QTabBar::tab {
+ color: rgb(0, 0, 0);
+  background: rgb(142, 127, 165);
+  border: 1px solid lightgray; 
+  padding: 15px;
+} 
+
+QTabBar::tab:selected { 
+  background: rgb(187, 159, 207);
+  margin-bottom: -1px; 
+}</string>
     </property>
     <property name="currentIndex">
      <number>-1</number>
@@ -57,6 +85,7 @@
       <widget class="QLabel" name="Name_label">
        <property name="styleSheet">
         <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
 	font: 600 10pt &quot;Montserrat SemiBold&quot;;
 }</string>
        </property>
@@ -69,6 +98,7 @@
       <widget class="QLabel" name="Type_label">
        <property name="styleSheet">
         <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
 	font: 600 10pt &quot;Montserrat SemiBold&quot;;
 }</string>
        </property>
@@ -82,8 +112,8 @@
    <widget class="QPushButton" name="btn_back">
     <property name="geometry">
      <rect>
-      <x>930</x>
-      <y>620</y>
+      <x>950</x>
+      <y>640</y>
       <width>151</width>
       <height>27</height>
      </rect>
@@ -115,7 +145,7 @@ QPushButton:focus {
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>620</y>
+      <y>640</y>
       <width>221</width>
       <height>27</height>
      </rect>
@@ -157,6 +187,7 @@ QPushButton:focus {
       <widget class="QLabel" name="Owners_label">
        <property name="styleSheet">
         <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
 	font: 600 10pt &quot;Montserrat SemiBold&quot;;
 }</string>
        </property>
@@ -181,6 +212,7 @@ QPushButton:focus {
       <widget class="QLabel" name="maxCards_label">
        <property name="styleSheet">
         <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
 	font: 600 10pt &quot;Montserrat SemiBold&quot;;
 }</string>
        </property>
@@ -195,7 +227,7 @@ QPushButton:focus {
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>620</y>
+      <y>640</y>
       <width>211</width>
       <height>27</height>
      </rect>
