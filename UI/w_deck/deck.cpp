@@ -19,9 +19,9 @@ Deck::~Deck()
 
 void Deck::setInfoLabels(QString Name, QString Type, QString Owners)
 {
-    ui->Name_label->setText(Name);
+    ui->Name_label->setText("Name: " + Name);
     ui->Type_label->setText(Type);
-    ui->Owners_label->setText(Owners);
+    ui->Owners_label->setText("Owners: " + Owners);
 }
 
 void Deck::setMaxCardLabel(int Count)
@@ -34,20 +34,24 @@ void Deck::setMaxCardLabel(int Count)
 
 void Deck::setBoardName(QString Name)
 {
-
+    ui->Name_label->text().clear();
+    ui->Name_label->setText("Name: " + Name);
 }
 
-void Deck::setBoardPrivacyType(QString)
+void Deck::setBoardPrivacyType(QString Type)
+{
+    ui->Type_label->text().clear();
+    ui->Type_label->setText("Privacy type: " + Type);
+}
+
+void Deck::addBoardOwner(QString Owners)
 {
 
+    ui->Owners_label->text().clear();
+    ui->Owners_label->setText("Owners: " + Owners);
 }
 
-void Deck::addBoardOwner(QString)
-{
-
-}
-
-void Deck::addTab(QString ColumnName)
+void Deck::initTabs(QString ColumnName)
 {
     NewTab *NewTabPtr = new NewTab(this);
     ui->tabWidget->addTab(NewTabPtr, ColumnName);
@@ -61,6 +65,16 @@ void Deck::addTab(QString ColumnName)
             }
         }
     }
+}
+
+void Deck::addTab(QString ColumnName)
+{
+    NewTab *NewTabPtr = new NewTab(this);
+    ui->tabWidget->addTab(NewTabPtr, ColumnName);
+    NewTabPtr->setAttribute(Qt::WA_DeleteOnClose, true);
+    allTabPtrs.append(NewTabPtr);
+
+    Database::AddNewColumn(QString::fromStdString(DeckList::OpenedBoard->jsnBoard["Name"]), ColumnName);
 }
 
 void Deck::on_btn_add_column_clicked()
@@ -79,10 +93,12 @@ void Deck::on_tabWidget_tabCloseRequested(int index)
         ui->tabWidget->removeTab(index);
 
         allTabPtrs.remove(index);
+        Database::DeleteColumn(QString::fromStdString(jsnBoard["Name"]), index);
     }
 
     if(allTabPtrs.length()==0){
         addTab("Default");
+        Database::AddNewColumn(QString::fromStdString(jsnBoard["Name"]), "Default");
         ui->statusBar->showMessage("Added Default Tab",3000);
     }
 }

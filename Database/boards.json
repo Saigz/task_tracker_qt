@@ -29,11 +29,12 @@
                     "ColumnName": "ThirdCol"
                 },
                 {
-                    "Cards": [
-                        "TEXT",
-                        "TEXT"
-                    ],
-                    "ColumnName": "THISISNEWCOLUMN"
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                },
+                {
+                    "Cards": null,
+                    "ColumnName": "Tab 5"
                 }
             ],
             "Name": "BIB",
@@ -52,7 +53,10 @@
             ],
             "Name": "NEWBOARD",
             "Owners": [
-                "BOBA"
+                "BOBA",
+                "Idioto",
+                "Idioto",
+                "Idioto"
             ],
             "Type": "public"
         },
@@ -71,7 +75,7 @@
                     "ColumnName": "NewColumn"
                 }
             ],
-            "Name": "FINALLYPRIVATE!",
+            "Name": "NOTSOPRIVATE",
             "Owners": [
                 "BOBA"
             ],
@@ -84,11 +88,12 @@
                     "ColumnName": "NewColumn"
                 }
             ],
-            "Name": "OBO",
+            "Name": "ABOBO",
             "Owners": [
-                "BOBA"
+                "BOBA",
+                "1234"
             ],
-            "Type": "private"
+            "Type": "public"
         },
         {
             "Columns": [

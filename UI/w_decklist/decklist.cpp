@@ -42,7 +42,7 @@ void DeckList::on_btn_Open_clicked()
 
     QString BoardOwners;
     for (auto Owners : Board["Owners"]) {
-        BoardOwners += QString::fromStdString(Owners) + " ";
+        BoardOwners += QString::fromStdString(Owners) + ", ";
     }
 
     std::cout << Board["Name"] << "  " <<  Board["Type"] << "  " <<  BoardOwners.toStdString() << std::endl;
@@ -50,7 +50,7 @@ void DeckList::on_btn_Open_clicked()
 
     for (auto i : Board["Columns"]) {
 
-        OpenedBoard->addTab(QString::fromStdString(i["ColumnName"]));
+        OpenedBoard->initTabs(QString::fromStdString(i["ColumnName"]));
     }
 
     this->close();

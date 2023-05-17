@@ -2,6 +2,7 @@
 #include "ui_newtab.h"
 #include "UI/w_decklist/decklist.h"
 #include "UI/w_deck/deck.h"
+#include "Database/database.h"
 
 #include "QMessageBox"
 
@@ -36,7 +37,6 @@ void NewTab::addNewCell(QString cellText, QString cellName)
         newCell->setTextData(cellText);
         allCellPtr.append(newCell);
         cellNumberTotal++;
-
         DeckList::OpenedBoard->setMaxCardLabel(cellNumberTotal);
     }
 }
@@ -49,5 +49,6 @@ void NewTab::closeCell(int index)
     }
     cellNumberTotal--;
     allCellPtr.remove(index);
+
     DeckList::OpenedBoard->setMaxCardLabel(cellNumberTotal);
 }
