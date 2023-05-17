@@ -1,10 +1,6 @@
 #include "deck.h"
 #include "ui_deck.h"
-#include <QString>
 #include <UI/w_login/loginwindow.h>
-#include <iostream>
-#include <string>
-#include <Qt>
 #include "UI/w_boardedit/boardedit.h"
 
 Deck::Deck(QWidget *parent) :

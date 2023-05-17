@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include "UI/w_deck/NewTab/newtab.h"
 #include <QMessageBox>
+#include <iostream>
+#include <string>
+#include <Qt>
+#include <QString>
 #include <QDebug>
 #include "nlohmann/json.hpp"
 
