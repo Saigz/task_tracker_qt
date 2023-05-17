@@ -63,7 +63,7 @@ void DeckList::on_btn_Open_clicked()
 
 void DeckList::UpdateBoards() {
     ui->listWidget->clear();
-    for (auto Board : Database::GetAllBoardForUser()) {
+    for (auto Board : Database::GetParsedBoards()) {
 
         QString OwnersStr;
         for (auto Owner : Board["Owners"]) {

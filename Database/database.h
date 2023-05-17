@@ -63,7 +63,12 @@ public:
     static int CreateBoard(QString Name, QString Type);
     static int DeleteBoard(QString Name);
     static json GetAllBoardForUser();
+
+    static void ChangeBoardType(QString BoardName, QString Type);
     static void AddOwnerToBoard(QString NewOwnerLogin);
+    static void AddNewColumn(QString BoardName, QString ColumnName);
+    static void AddNewCardToColumn(QString BoardName, QString ColumnName, QString Text);
+    static void RenameColumn(QString BoardName, int Index, QString NewColumnName);
 
 //------------------optional------------------------------------------
 

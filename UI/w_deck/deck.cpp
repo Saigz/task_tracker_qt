@@ -6,6 +6,8 @@
 #include <string>
 #include <Qt>
 #include "UI/w_boardedit/boardedit.h"
+#include "Database/database.h"
+#include "QInputDialog"
 
 Deck::Deck(QWidget *parent) :
     QMainWindow(parent),
@@ -67,8 +69,8 @@ void Deck::addTab(QString ColumnName)
 
 void Deck::on_btn_add_column_clicked()
 {
+    Database::AddNewColumn(QString::fromStdString(jsnBoard["Name"]), "NewColumn");
     addTab(QString("Tab %0").arg(ui->tabWidget->count()+1));
-
 }
 
 void Deck::on_tabWidget_tabCloseRequested(int index)
@@ -96,17 +98,19 @@ void Deck::on_btn_back_clicked()
 }
 
 
-void Deck::on_btn_add_owner_clicked()
-{
-
-    std::cout << jsnBoard["Name"] << std::endl;
-}
-
-
 
 void Deck::on_btn_edit_clicked()
 {
     BoardEdit z;
     z.exec();
+}
+
+
+void Deck::on_btn_rename_tab_clicked()
+{
+    QString Text = QInputDialog::getText(this, "Enter new name", "Enter new name:", QLineEdit::Normal, "");
+    std::cout << ui->tabWidget->tabText(ui->tabWidget->currentIndex()).toStdString() << std::endl;
+    Database::RenameColumn(QString::fromStdString(jsnBoard["Name"]), ui->tabWidget->currentIndex(), Text);
+    ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), Text);
 }
 
