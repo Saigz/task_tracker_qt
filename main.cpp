@@ -1,6 +1,6 @@
 #include "UI\w_login\loginwindow.h"
 #include "Database/database.h"
-
+#include "UI/w_deck/deck.h"
 #include <QApplication>
 #include <iostream>
 #include <fstream>
@@ -25,11 +25,10 @@
 
 int main(int argc, char *argv[])
 {
-//    Database::ParseBoardsData();
-//    Database::DeleteBoard("Board1");
-//    return 1;
-
-
+//    QApplication a(argc, argv);
+//    Deck NewDeck;
+//    NewDeck.show();
+//    return a.exec();
 
     Database::ParseBoardsData();
     Database::ParseUserData();

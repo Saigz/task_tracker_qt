@@ -56,37 +56,5 @@
             ],
             "Type": "private"
         },
-        {
-            "Columns": null,
-            "Name": "?",
-            "Owners": [
-                "ABOBA"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": null,
-            "Name": "NEW1",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": null,
-            "Name": "NEW2",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": null,
-            "Name": "NEW3",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "public"
-        }
     ]
 }

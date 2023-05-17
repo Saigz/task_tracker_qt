@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include <QListWidgetItem>
 #include <vector>
+#include "UI/w_deck/deck.h"
 
 namespace Ui {
 class DeckList;
@@ -19,6 +20,8 @@ public:
     ~DeckList();
     static Deck *WindowDeck;
 
+
+    static Deck *OpenedBoard;
     void UpdateBoards();
 
 signals:

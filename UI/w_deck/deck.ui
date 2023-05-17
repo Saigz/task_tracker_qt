@@ -23,13 +23,86 @@
    <string notr="true">background-color: rgb(254, 200, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>1201</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+    <property name="tabsClosable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="Name_label">
+       <property name="text">
+        <string>BoardName</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="Type_label">
+       <property name="text">
+        <string>PrivacyType</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="btn_add_owner">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>0</y>
+      <width>294</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+    </property>
+    <property name="text">
+     <string> Edit Board</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="btn_close">
     <property name="geometry">
      <rect>
-      <x>980</x>
-      <y>610</y>
+      <x>1080</x>
       <width>131</width>
-      <height>31</height>
+      <height>27</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -55,7 +128,142 @@ QPushButton:focus {
      <string>Close</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_back">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>620</y>
+      <width>151</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_add_column">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>620</y>
+      <width>211</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Add New Tab</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>0</y>
+      <width>351</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="Owners_label">
+       <property name="text">
+        <string>Owners</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>0</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="maxCards_label">
+       <property name="text">
+        <string>Cards: 0/0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="btn_add_column_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>620</y>
+      <width>201</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Rename Tab</string>
+    </property>
+   </widget>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources/>
  <connections/>

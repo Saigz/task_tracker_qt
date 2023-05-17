@@ -59,7 +59,7 @@ public:
     static void ParseBoardsData();
     static void BoardsDataToFile();
 
-    static int FindBoard(QString Name);
+    static json FindBoard(QString Name);
     static int CreateBoard(QString Name, QString Type);
     static int DeleteBoard(QString Name);
     static json GetAllBoardForUser();
