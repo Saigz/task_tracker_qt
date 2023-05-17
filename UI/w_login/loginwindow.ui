@@ -36,9 +36,9 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>391</x>
       <y>150</y>
-      <width>382</width>
+      <width>421</width>
       <height>291</height>
      </rect>
     </property>
@@ -120,8 +120,11 @@ QLineEdit:focus {
              <property name="inputMask">
               <string/>
              </property>
-             <property name="placeholderText">
+             <property name="text">
               <string/>
+             </property>
+             <property name="maxLength">
+              <number>15</number>
              </property>
             </widget>
            </item>
@@ -150,6 +153,9 @@ QLineEdit:focus {
              </property>
              <property name="text">
               <string/>
+             </property>
+             <property name="maxLength">
+              <number>15</number>
              </property>
              <property name="echoMode">
               <enum>QLineEdit::Password</enum>

@@ -2,9 +2,6 @@
 #include "ui_registration.h"
 #include "Database/database.h"
 
-#include <QMessageBox>
-#include <QRegularExpression>
-
 Registration::Registration(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Registration)
@@ -21,15 +18,8 @@ void Registration::on_btn_SignUp_pressed()
 {
     QString Login = ui->lineEdit_Login->text();
     QString Password = ui->lineEdit_Password->text();
-    int login_length = ui->lineEdit_Login->text().size();
-    int pass_length = ui->lineEdit_Password->text().size();
 
-    //std::regex pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]");
-    //bool hasLetters = Login.contains(QRegularExpression("[A-Za-z]"));
-    //bool hasDigits = Login.contains(QRegularExpression("\\d"));
-    //bool hasSpecialChars = Login.contains(QRegularExpression("[-_*#$@&?!]"));
-
-    if (Login.isEmpty() or Password.isEmpty() or login_length < 3 or pass_length < 3) {
+    if (Login.isEmpty() or Password.isEmpty()) {
 
         QMessageBox::warning(this, "Incorrect input", "Entered data is not valid, empty, or contains prohibited symbols: _ _ _ _ _ _");
 
@@ -40,8 +30,8 @@ void Registration::on_btn_SignUp_pressed()
             QMessageBox::information(this, "печалька", "Вы не правильно регистрируетесь. Минимум - 4 символа, максимум - 15. Поле должно содержать только буквы, цифры и _ * # $ @ & ? !");
         }
         else {
-            int SuccesfullyAdded = Database::AddUser(Login, Password);
-            if (SuccesfullyAdded) {
+            int isSuccesfullyAdded = Database::AddUser(Login, Password);
+            if (isSuccesfullyAdded) {
                 QMessageBox::information(this, "кайф", "Успешно зарегистрировался");
             } else {
                 QMessageBox::warning(this, "печалька", "Занято, попутал ты чето");
@@ -49,8 +39,6 @@ void Registration::on_btn_SignUp_pressed()
         }
     }
 }
-// _-*#$@&?!     (!Password.contains(QRegularExpression("^[0-9a-zA-Z]+$"))) or (!Login.contains(QRegularExpression("^[0-9a-zA-Z]+$")))
-
 
 void Registration::on_btn_Back_clicked()
 {

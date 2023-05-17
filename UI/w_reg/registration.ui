@@ -86,7 +86,7 @@ QLineEdit:focus {
 </string>
           </property>
           <property name="maxLength">
-           <number>12</number>
+           <number>15</number>
           </property>
          </widget>
         </item>
@@ -113,7 +113,7 @@ QLineEdit:focus {
 </string>
           </property>
           <property name="maxLength">
-           <number>12</number>
+           <number>15</number>
           </property>
          </widget>
         </item>

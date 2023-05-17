@@ -19,24 +19,9 @@ void NewCell::setTextData(QString cellText){
     ui->textEdit->setPlainText(cellText);
 }
 
-void NewCell::setCellName(QString cellName){
-    ui->cellLabel->setText(cellName);
-}
-
-
 void NewCell::on_deleteButton_clicked()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Delete Confirmation", "Delete This Cell?",QMessageBox::Yes|QMessageBox::No);
-    if (reply == QMessageBox::Yes){
-        emit closeThisCell(CellNumber);
-    }
-    //    this->close();
-}
-
-
-void NewCell::on_clearButton_clicked()
-{
-    ui->textEdit->clear();
+    emit closeThisCell(CellNumber);
 }
 

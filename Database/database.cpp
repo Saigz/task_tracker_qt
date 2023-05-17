@@ -279,7 +279,6 @@ void Database::AddOwnerToBoard(QString NewOwnerLogin) {
     }
 }
 
-
 //------------------optional------------------------------------------
 
 json Database::GetParsedBoards() {

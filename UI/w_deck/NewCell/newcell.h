@@ -27,9 +27,11 @@ private:
     Ui::NewCell *ui;
 
 signals:
+
     void closeThisCell(int);
+
 private slots:
-    void on_clearButton_clicked();
+
     void on_deleteButton_clicked();
 };
 

@@ -2,7 +2,10 @@
 #define LOGINWINDOW_H
 
 #include "UI/w_decklist/decklist.h"
+
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QRegularExpressionValidator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginWindow; }
@@ -15,6 +18,7 @@ class LoginWindow : public QMainWindow
 public:
     LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
+
     static DeckList *WindowList;
 
 private slots:
