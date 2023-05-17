@@ -55,6 +55,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QLabel" name="Name_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	font: 600 10pt &quot;Montserrat SemiBold&quot;;
+}</string>
+       </property>
        <property name="text">
         <string>BoardName</string>
        </property>
@@ -62,6 +67,11 @@
      </item>
      <item>
       <widget class="QLabel" name="Type_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	font: 600 10pt &quot;Montserrat SemiBold&quot;;
+}</string>
+       </property>
        <property name="text">
         <string>PrivacyType</string>
        </property>
@@ -72,41 +82,9 @@
    <widget class="QPushButton" name="btn_add_owner">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>0</y>
+      <x>500</x>
+      <y>620</y>
       <width>294</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
-    padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}
-QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
-}
-QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
-    </property>
-    <property name="text">
-     <string> Edit Board</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_close">
-    <property name="geometry">
-     <rect>
-      <x>1080</x>
-      <y>0</y>
-      <width>131</width>
       <height>27</height>
      </rect>
     </property>
@@ -130,7 +108,7 @@ QPushButton:focus {
 }</string>
     </property>
     <property name="text">
-     <string>Close</string>
+     <string> Edit Board</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_back">
@@ -144,22 +122,22 @@ QPushButton:focus {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
     </property>
     <property name="text">
      <string>Back</string>
@@ -168,30 +146,30 @@ QPushButton:focus {
    <widget class="QPushButton" name="btn_add_column">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>620</y>
-      <width>211</width>
+      <width>221</width>
       <height>27</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
     </property>
     <property name="text">
      <string>Add New Tab</string>
@@ -209,6 +187,11 @@ QPushButton:focus {
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
       <widget class="QLabel" name="Owners_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	font: 600 10pt &quot;Montserrat SemiBold&quot;;
+}</string>
+       </property>
        <property name="text">
         <string>Owners</string>
        </property>
@@ -221,13 +204,18 @@ QPushButton:focus {
      <rect>
       <x>820</x>
       <y>0</y>
-      <width>81</width>
+      <width>89</width>
       <height>31</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
       <widget class="QLabel" name="maxCards_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	font: 600 10pt &quot;Montserrat SemiBold&quot;;
+}</string>
+       </property>
        <property name="text">
         <string>Cards: 0/0</string>
        </property>
@@ -238,30 +226,30 @@ QPushButton:focus {
    <widget class="QPushButton" name="btn_add_column_2">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>250</x>
       <y>620</y>
-      <width>201</width>
+      <width>211</width>
       <height>27</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	border: 2px solid rgb(104, 104, 104);
-	border-radius: 8px;
-	padding-left: auto;
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
     padding-right: auto;
-	color: rgb(255, 255, 255);
-	background-color: rgb(27, 29, 35);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {
-	border: 2px solid rgb(85, 170, 255);
-	background-color: rgb(43, 45, 56);
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
 }
 QPushButton:focus {
-	border: 2px solid rgb(48, 50, 62);
-}
-</string>
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
     </property>
     <property name="text">
      <string>Rename Tab</string>

@@ -2,10 +2,14 @@
 #include "ui_deck.h"
 #include <UI/w_cell/cell.h>
 #include <QString>
+<<<<<<< HEAD
+#include <UI/w_login/loginwindow.h>
+=======
 #include <iostream>
 #include <string>
 #include <Qt>
 
+>>>>>>> 93f530dfc291f046bc819d2cc51d6fdd8c31b4e9
 
 Deck::Deck(QWidget *parent) :
     QMainWindow(parent),
@@ -61,9 +65,10 @@ void Deck::on_tabWidget_tabCloseRequested(int index)
     }
 }
 
-void Deck::on_btn_close_clicked()
+void Deck::on_btn_back_clicked()
 {
-    this->close();
+    close();
+    LoginWindow::WindowList->show();
 }
 
 
