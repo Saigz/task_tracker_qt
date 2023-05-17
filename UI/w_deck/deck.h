@@ -27,6 +27,8 @@ public:
     //json board object
     json jsnBoard;
 
+    void setInfoLabels(QString Name, QString Type, QString Owners);
+
 signals:
     void deck_list();
 

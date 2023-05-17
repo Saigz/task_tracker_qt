@@ -28,7 +28,6 @@ signals:
     void login_window();
 
 private slots:
-    void on_btn_Open_pressed();
 
     void on_btn_Create_pressed();
 
@@ -36,6 +35,7 @@ private slots:
 
     void on_btn_Exit_pressed();
 
+    void on_btn_Open_clicked();
 
 private:
     Ui::DeckList *ui;
