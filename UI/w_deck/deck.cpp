@@ -12,3 +12,10 @@ Deck::~Deck()
 {
     delete ui;
 }
+
+void Deck::on_btn_close_clicked()
+{
+    close();
+    emit deck_list();
+}
+

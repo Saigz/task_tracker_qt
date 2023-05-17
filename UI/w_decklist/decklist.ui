@@ -121,9 +121,9 @@ QPushButton:focus {
    <widget class="QPushButton" name="btn_Exit">
     <property name="geometry">
      <rect>
-      <x>649</x>
+      <x>629</x>
       <y>470</y>
-      <width>121</width>
+      <width>141</width>
       <height>24</height>
      </rect>
     </property>
@@ -147,7 +147,7 @@ QPushButton:focus {
 </string>
     </property>
     <property name="text">
-     <string>Exit</string>
+     <string>Unlogin</string>
     </property>
    </widget>
   </widget>

@@ -51,3 +51,9 @@ void CreateDeck::on_btn_Create_pressed()
 
 }
 
+
+void CreateDeck::on_btn_back_clicked()
+{
+    close();
+}
+

@@ -34,14 +34,6 @@
         },
         {
             "Columns": null,
-            "Name": "ABOBUS",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "private"
-        },
-        {
-            "Columns": null,
             "Name": "FINALLY - PRIVATE!",
             "Owners": [
                 "BOBA"

@@ -4,6 +4,7 @@
 #include "Database\database.h"
 
 #include <QMessageBox>
+#include <QRegularExpressionValidator>
 #include "ui_loginwindow.h"
 
 DeckList *LoginWindow::WindowList;
@@ -14,6 +15,7 @@ LoginWindow::LoginWindow(QWidget *parent)
 {
     WindowList = new class::DeckList();
     ui->setupUi(this);
+    connect(WindowList, &DeckList::login_window, this, &LoginWindow::show);
 }
 
 LoginWindow::~LoginWindow()
@@ -26,10 +28,11 @@ void LoginWindow::on_btn_SignIn_pressed()
 {
     QString Login = ui->lineEdit_Login->text();
     QString Pass = ui->lineEdit_Password->text();
-
+    int login_length = ui->lineEdit_Login->text().size();
+    int pass_length = ui->lineEdit_Password->text().size();
 
     //Needs proper input validation
-    if (Login.isEmpty() or Pass.isEmpty()) {
+    if (Login.isEmpty() or Pass.isEmpty() or login_length < 3 or pass_length < 3) {
 
         QMessageBox::warning(this, "Incorrect input", "Entered data is not valid, empty, or contains prohibited symbols: _ _ _ _ _ _");
 

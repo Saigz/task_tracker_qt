@@ -20,9 +20,11 @@ void Registration::on_btn_SignUp_pressed()
 {
     QString Login = ui->lineEdit_Login->text();
     QString Password = ui->lineEdit_Password->text();
+    int login_length = ui->lineEdit_Login->text().size();
+    int pass_length = ui->lineEdit_Password->text().size();
 
 
-    if (Login.isEmpty() or Password.isEmpty()) {
+    if (Login.isEmpty() or Password.isEmpty() or login_length < 3 or pass_length < 3) {
 
         QMessageBox::warning(this, "Incorrect input", "Entered data is not valid, empty, or contains prohibited symbols: _ _ _ _ _ _");
 

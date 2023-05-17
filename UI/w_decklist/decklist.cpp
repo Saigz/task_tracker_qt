@@ -1,6 +1,7 @@
 #include "decklist.h"
 #include "ui_decklist.h"
 #include "UI\w_createdeck\createdeck.h"
+#include "UI\w_deck\deck.h"
 #include "Database/database.h"
 #include "QMessageBox"
 
@@ -9,6 +10,8 @@ DeckList::DeckList(QWidget *parent) :
     ui(new Ui::DeckList)
 {
     ui->setupUi(this);
+
+    connect(WindowDeck, &Deck::deck_list, this, &DeckList::show);
 
     UpdateBoards();
 }
@@ -75,5 +78,6 @@ void DeckList::on_btn_Delete_pressed()
 void DeckList::on_btn_Exit_pressed()
 {
     close();
+    emit login_window(); // back to loginwindow
 }
 

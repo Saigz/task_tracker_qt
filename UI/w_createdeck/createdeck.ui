@@ -22,7 +22,7 @@
      <x>50</x>
      <y>40</y>
      <width>251</width>
-     <height>131</height>
+     <height>150</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -61,6 +61,9 @@ QLineEdit:focus {
 }
 
 </string>
+        </property>
+        <property name="maxLength">
+         <number>12</number>
         </property>
        </widget>
       </item>
@@ -113,6 +116,32 @@ QPushButton:focus {
       </property>
       <property name="text">
        <string>Create</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_back">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border: 2px solid rgb(104, 104, 104);
+	border-radius: 8px;
+	padding-left: auto;
+    padding-right: auto;
+	color: rgb(255, 255, 255);
+	background-color: rgb(27, 29, 35);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 56);
+}
+QPushButton:focus {
+	border: 2px solid rgb(48, 50, 62);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
       </property>
      </widget>
     </item>
