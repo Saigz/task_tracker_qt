@@ -32,29 +32,21 @@ void Registration::on_btn_SignUp_pressed()
         QMessageBox::warning(this, "Incorrect input", "Entered data is not valid, empty, or contains prohibited symbols: _ _ _ _ _ _");
 
     } else {
-        if (((Login.length() < 4) or (Login.length() > 15)) or ((Password.length() < 4) or (Password.length() > 15))) {
-            QMessageBox::information(this, "печалька", "Минимум - 4 символа, максимум - 15");
+        if (((Login.length() < 4) or (Login.length() > 15)) or ((Password.length() < 4) or (Password.length() > 15)) or
+            (!Password.contains(QRegularExpression("^[0-9a-zA-Z_*#$@&?!]+$"))) or (!Login.contains(QRegularExpression("^[0-9a-zA-Z_*#$@&?!]+$")))) {
+            QMessageBox::information(this, "печалька", "Вы не правильно регистрируетесь. Минимум - 4 символа, максимум - 15. Поле должно содержать только буквы, цифры и _ * # $ @ & ? !");
         }
         else {
-            if(!Password.contains(QRegularExpression("[a-zA-Z0-9_-*#$@&?!]+")) or !Login.contains(QRegularExpression("[]+"))) {
-                QMessageBox::information(this, "печалька", "Поле должно содержать только буквы, цифры и _ - * # $ @ & ? !");
-            }
-            else {
-                int SuccesfullyAdded = Database::AddUser(Login, Password);
-
-                if (SuccesfullyAdded) {
-
-                    QMessageBox::information(this, "кайф", "Успешно зарегистрировался");
-
-                } else {
-
-                    QMessageBox::warning(this, "печалька", "Занято, попутал ты чето");
-                }
+            int SuccesfullyAdded = Database::AddUser(Login, Password);
+            if (SuccesfullyAdded) {
+                QMessageBox::information(this, "кайф", "Успешно зарегистрировался");
+            } else {
+                QMessageBox::warning(this, "печалька", "Занято, попутал ты чето");
             }
         }
-
     }
 }
+// _-*#$@&?!     (!Password.contains(QRegularExpression("^[0-9a-zA-Z]+$"))) or (!Login.contains(QRegularExpression("^[0-9a-zA-Z]+$")))
 
 
 void Registration::on_btn_Back_clicked()
