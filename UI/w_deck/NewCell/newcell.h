@@ -22,6 +22,7 @@ public:
 
     void setTextData(QString cellText);
     void setCellName(QString cellName);
+
 private:
     Ui::NewCell *ui;
 

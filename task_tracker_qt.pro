@@ -12,6 +12,7 @@ CONFIG += c++17
 
 SOURCES += \
     Database/database.cpp \
+    UI/w_boardedit/boardedit.cpp \
     UI/w_deck/NewCell/newcell.cpp \
     UI/w_deck/NewTab/newtab.cpp \
     UI/w_createdeck/createdeck.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
+    UI/w_boardedit/boardedit.h \
     UI/w_deck/NewCell/newcell.h \
     UI/w_deck/NewTab/newtab.h \
     nlohmann/json.hpp \
@@ -33,6 +35,7 @@ HEADERS += \
     UI/w_reg/registration.h
 
 FORMS += \
+    UI/w_boardedit/boardedit.ui \
     UI/w_deck/NewCell/newcell.ui \
     UI/w_deck/NewTab/newtab.ui \
     UI/w_createdeck/createdeck.ui \

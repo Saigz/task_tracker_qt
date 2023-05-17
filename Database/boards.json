@@ -1,10 +1,36 @@
 {
     "boards": [
         {
-            "Columns": null,
+            "Columns": [
+                {
+                    "ColumnName": "FirstCol",
+                    "Cards": [
+                        "12345",
+                        "213123",
+                        "312"
+                    ]
+                },
+                {
+                    "ColumnName": "SecondCol",
+                    "Cards": [
+                        "12345",
+                        "213123",
+                        "312"
+                    ]
+                },
+                {
+                    "ColumnName": "ThirdCol",
+                    "Cards": [
+                        "12345",
+                        "213123",
+                        "312"
+                    ]
+                }
+            ],
             "Name": "BIB",
             "Owners": [
-                "BOBA"
+                "BOBA",
+                "123"
             ],
             "Type": "public"
         },

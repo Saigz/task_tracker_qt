@@ -27,7 +27,15 @@ public:
     //json board object
     json jsnBoard;
 
+
+    void addTab(QString ColumnName);
+
+
     void setInfoLabels(QString Name, QString Type, QString Owners);
+    void setMaxCardLabel(int Count);
+    void setBoardName(QString Name);
+    void setBoardPrivacyType(QString);
+    void addBoardOwner(QString);
 
 signals:
     void deck_list();
@@ -42,9 +50,10 @@ private slots:
 
     void on_btn_back_clicked();
 
+    void on_btn_edit_clicked();
+
 private:
     Ui::Deck *ui;
-    void addTab(QString ColumnName);
 
 };
 

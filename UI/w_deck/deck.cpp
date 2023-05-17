@@ -1,18 +1,17 @@
 #include "deck.h"
 #include "ui_deck.h"
-#include <UI/w_cell/cell.h>
 #include <QString>
 #include <UI/w_login/loginwindow.h>
 #include <iostream>
 #include <string>
 #include <Qt>
+#include "UI/w_boardedit/boardedit.h"
 
 Deck::Deck(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Deck)
 {
     ui->setupUi(this);
-    addTab("YourNewColumn");
 
 }
 
@@ -28,13 +27,43 @@ void Deck::setInfoLabels(QString Name, QString Type, QString Owners)
     ui->Owners_label->setText(Owners);
 }
 
-void Deck::addTab(QString TabName)
+void Deck::setMaxCardLabel(int Count)
+{
+    QString NewStr = "Cards: ";
+    NewStr += QString::number(Count);
+    NewStr += "/4";
+    ui->maxCards_label->setText(NewStr);
+}
+
+void Deck::setBoardName(QString Name)
+{
+
+}
+
+void Deck::setBoardPrivacyType(QString)
+{
+
+}
+
+void Deck::addBoardOwner(QString)
+{
+
+}
+
+void Deck::addTab(QString ColumnName)
 {
     NewTab *NewTabPtr = new NewTab(this);
-    ui->tabWidget->addTab(NewTabPtr, TabName);
+    ui->tabWidget->addTab(NewTabPtr, ColumnName);
     NewTabPtr->setAttribute(Qt::WA_DeleteOnClose, true);
 
     allTabPtrs.append(NewTabPtr);
+    for (auto Card : jsnBoard["Columns"]) {
+        if (Card["ColumnName"] == ColumnName.toStdString()) {
+            for (auto i : Card["Cards"]) {
+                NewTabPtr->addNewCell(QString::fromStdString(i), "Cellname");
+            }
+        }
+    }
 }
 
 void Deck::on_btn_add_column_clicked()
@@ -74,4 +103,11 @@ void Deck::on_btn_add_owner_clicked()
     std::cout << jsnBoard["Name"] << std::endl;
 }
 
+
+
+void Deck::on_btn_edit_clicked()
+{
+    BoardEdit z;
+    z.exec();
+}
 

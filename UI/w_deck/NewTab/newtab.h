@@ -20,10 +20,10 @@ public:
 
 public slots:
     void closeCell(int);
+    void addNewCell(QString cellText = "", QString cellName = "Cell Name");
 
 private slots:
     void on_pushButton_clicked();
-    void addNewCell(QString cellText = "", QString cellName = "Cell Name");
 
 private:
     Ui::NewTab *ui;
