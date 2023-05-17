@@ -23,6 +23,34 @@
         {
             "Login": "notfound",
             "Password": "sixfootunderground"
+        },
+        {
+            "Login": "Мфы",
+            "Password": "ЫВФВЫФв"
+        },
+        {
+            "Login": "МфыФЫВЫФ",
+            "Password": "ЫВФВЫФв"
+        },
+        {
+            "Login": "d",
+            "Password": "asdas"
+        },
+        {
+            "Login": "dasds",
+            "Password": "asdas"
+        },
+        {
+            "Login": "ы",
+            "Password": "фывыфв"
+        },
+        {
+            "Login": "a",
+            "Password": "asdsad"
+        },
+        {
+            "Login": "''''''",
+            "Password": "sdfdsf"
         }
     ]
 }

@@ -26,15 +26,7 @@
         },
         {
             "Columns": null,
-            "Name": "Board4",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": null,
-            "Name": "ABOBUS",
+            "Name": "FINALLY - PRIVATE!",
             "Owners": [
                 "BOBA"
             ],
@@ -42,7 +34,15 @@
         },
         {
             "Columns": null,
-            "Name": "FINALLY - PRIVATE!",
+            "Name": "ABOBU",
+            "Owners": [
+                "BOBA"
+            ],
+            "Type": "private"
+        },
+        {
+            "Columns": null,
+            "Name": "OBO",
             "Owners": [
                 "BOBA"
             ],
