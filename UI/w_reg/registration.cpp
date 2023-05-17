@@ -35,6 +35,7 @@ void Registration::on_btn_SignUp_pressed()
         if (SuccesfullyAdded) {
 
             QMessageBox::information(this, "кайф", "Успешно зарегистрировался");
+            close();
 
         } else {
 

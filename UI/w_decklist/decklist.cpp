@@ -5,10 +5,15 @@
 #include "Database/database.h"
 #include "QMessageBox"
 
+
+Deck *DeckList::WindowDeck;
+
 DeckList::DeckList(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::DeckList)
 {
+
+    WindowDeck = new class::Deck();
     ui->setupUi(this);
 
     connect(WindowDeck, &Deck::deck_list, this, &DeckList::show);
