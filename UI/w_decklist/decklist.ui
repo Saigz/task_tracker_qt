@@ -20,7 +20,7 @@
    <string>TaskManager</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../other/resource.qrc">
+   <iconset resource="../../data/other/resource.qrc">
     <normaloff>:/res/windows.ico</normaloff>:/res/windows.ico</iconset>
   </property>
   <property name="styleSheet">
@@ -255,7 +255,7 @@ QPushButton:focus {
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../../other/resource.qrc"/>
+  <include location="../../data/other/resource.qrc"/>
  </resources>
  <connections/>
 </ui>
