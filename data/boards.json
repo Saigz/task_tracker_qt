@@ -4,7 +4,15 @@
             "Columns": [
                 {
                     "Cards": [
-                        "12345",
+                        {
+                            "CardName": "",
+                            "CardText": "",
+                            "CardColor": "",
+                            "CardOwners": [
+
+                            ],
+
+                        },
                         "213123",
                         "312",
                         "132"
