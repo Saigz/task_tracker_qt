@@ -3,8 +3,6 @@
 
 using json = nlohmann::json;
 
-
-
 //-----------------------------------------USERS----------------------------------------------
 //--------------------------------------------------------------------------------------------
 
@@ -223,8 +221,6 @@ void Database::AddNewColumn(QString BoardName, QString ColumnName)
     for (auto & Board : ParsedBoards) {
         if (Board["Name"] == BoardName.toStdString()) {
 
-
-
             json NewColumn;
             NewColumn["ColumnName"] = ColumnName.toStdString();
             NewColumn["Cards"];
@@ -238,20 +234,32 @@ void Database::AddNewColumn(QString BoardName, QString ColumnName)
 }
 
 
-void Database::AddNewCardToColumn(QString BoardName, QString ColumnName, QString Text)
+void Database::AddNewCardToColumn(QString BoardName, int ColumnIndex, QString Text)
 {
     for (auto & Board : ParsedBoards) {
         if (Board["Name"] == BoardName.toStdString()) {
 
-
+            if (Board["Columns"].size() < ColumnIndex) {
+                std::cout << "Cant find Columns by this index" << std::endl;
+                return;
+            }
+            int i = 0;
             for (auto & Column : Board["Columns"]) {
-                if (Column["ColumnName"] == ColumnName.toStdString()) {
+                if (i == ColumnIndex) {
+                    json Card;
+                    Card["CardName"] = "CardName";
+                    Card["CardText"] = Text.toStdString();
+                    Card["CardColor"] = "XXXXX";
+                    for (auto Own : Board["Owners"]) {
+                        Card["CardOwners"].push_back(Own);
+                    }
 
-                    //std::cout << Column["Cards"];
-                    Column["Cards"].push_back(Text.toStdString());
+                    Column["Cards"].push_back(Card);
                     BoardsDataToFile();
+                    std::cout << "Added basic card to this column" << std::endl;
                     return;
                 }
+                i++;
             }
             return;
         }

@@ -15,6 +15,7 @@
         btn.pressed -> btn.clicked
         jsnBoard and OpenedBoard does not affected by inner class changes
 
+        BoardEdit multi fix
         Card management
         Pictures Management
         CardColourManagament
@@ -25,9 +26,13 @@
 int main(int argc, char *argv[])
 {
 
+
+
     Database::ParseBoardsData();
     Database::ParseUserData();
 
+
+    //Database::AddNewCardToColumn("BIB", 5, "12345678");
     //Database::DeleteColumn("BIB", 1);
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("Fusion"));

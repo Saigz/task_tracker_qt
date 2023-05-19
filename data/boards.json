@@ -5,156 +5,81 @@
                 {
                     "Cards": [
                         {
-                            "CardName": "",
-                            "CardText": "",
-                            "CardColor": "",
+                            "CardColor": "XXXXX",
+                            "CardName": "NewCard",
                             "CardOwners": [
-
+                                "1234",
+                                "notfound"
                             ],
-
+                            "CardText": "CardText123"
                         },
-                        "213123",
-                        "312",
-                        "132"
+                        {
+                            "CardColor": "XXXXX",
+                            "CardName": "N3ewCard",
+                            "CardOwners": [
+                                "1234",
+                                "notfound"
+                            ],
+                            "CardText": "Car3dText123"
+                        },
+                        {
+                            "CardColor": "XXXXX",
+                            "CardName": "CardName",
+                            "CardOwners": [
+                                "BOBA",
+                                "123"
+                            ],
+                            "CardText": "12345678"
+                        }
                     ],
-                    "ColumnName": "HUY"
+                    "ColumnName": "FIRST"
                 },
                 {
                     "Cards": [
-                        "12345",
-                        "213123",
-                        "312",
-                        "newcardtext"
+                        {
+                            "CardColor": "XXXXX",
+                            "CardName": "NewCard",
+                            "CardOwners": [
+                                "1234",
+                                "notfound"
+                            ],
+                            "CardText": "CardText123"
+                        },
+                        {
+                            "CardColor": "XXXXX",
+                            "CardName": "N3ewCard",
+                            "CardOwners": [
+                                "1234",
+                                "notfound"
+                            ],
+                            "CardText": "Car3dText123"
+                        },
+                        {
+                            "CardColor": "XXXXX",
+                            "CardName": "CardName",
+                            "CardOwners": [
+                                "BOBA",
+                                "123"
+                            ],
+                            "CardText": "12345678"
+                        }
                     ],
-                    "ColumnName": "SecondCol"
-                },
-                {
-                    "Cards": [
-                        "12345",
-                        "213123",
-                        "312"
-                    ],
-                    "ColumnName": "ThirdCol"
+                    "ColumnName": "SDFB"
                 },
                 {
                     "Cards": null,
-                    "ColumnName": "NewColumn"
+                    "ColumnName": "ABOB"
                 },
                 {
                     "Cards": null,
-                    "ColumnName": "Tab 5"
+                    "ColumnName": "ABSDBF"
                 }
             ],
             "Name": "BIB",
             "Owners": [
                 "BOBA",
-                "123"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": [
-                {
-                    "Cards": null,
-                    "ColumnName": "NewColumn"
-                }
-            ],
-            "Name": "NEWBOARD",
-            "Owners": [
-                "BOBA",
-                "Idioto",
-                "Idioto",
-                "Idioto"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": [
-                {
-                    "Cards": null,
-                    "ColumnName": "sad"
-                },
-                {
-                    "Cards": null,
-                    "ColumnName": "NewColumn"
-                },
-                {
-                    "Cards": null,
-                    "ColumnName": "NewColumn"
-                }
-            ],
-            "Name": "NOTSOPRIVATE",
-            "Owners": [
-                "BOBA"
-            ],
-            "Type": "private"
-        },
-        {
-            "Columns": [
-                {
-                    "Cards": null,
-                    "ColumnName": "NewColumn"
-                }
-            ],
-            "Name": "ABOBO",
-            "Owners": [
-                "BOBA",
-                "1234"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": [
-                {
-                    "Cards": null,
-                    "ColumnName": "NewColumn"
-                }
-            ],
-            "Name": "BOB",
-            "Owners": [
-                "123"
-            ],
-            "Type": "private"
-        },
-        {
-            "Columns": [
-                {
-                    "Cards": null,
-                    "ColumnName": "NewColumn"
-                }
-            ],
-            "Name": "ABOBA",
-            "Owners": [
-                "123"
-            ],
-            "Type": "public"
-        },
-        {
-            "Columns": [
-                {
-                    "Cards": null,
-                    "ColumnName": "bab"
-                }
-            ],
-            "Name": "New123Desk",
-            "Owners": [
-                "123"
-            ],
-            "Type": "private"
-        },
-        {
-            "Columns": null,
-            "Name": "adsfcax",
-            "Owners": [
-                "123"
-            ],
-            "Type": "private"
-        },
-        {
-            "Columns": null,
-            "Name": "123",
-            "Owners": [
-                "123"
+                "123",
+                "notfound"
             ],
             "Type": "public"
         }
