@@ -9,9 +9,10 @@
 #include <Qt>
 #include <QString>
 #include <QDebug>
-#include "nlohmann/json.hpp"
+#include <data/includes/json.hpp>
 
-using json = nlohmann::json;
+
+using nlohmann::json;
 
 namespace Ui {
 class Deck;
@@ -29,7 +30,7 @@ public:
     QVector<NewTab*> allTabPtrs;
 
     //json board object
-    json jsnBoard;
+    nlohmann::json jsnBoard;
 
 
     void addTab(QString ColumnName);

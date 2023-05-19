@@ -11,7 +11,7 @@ CONFIG += c++17
 
 
 SOURCES += \
-    Database/database.cpp \
+    domain/database.cpp \
     UI/w_boardedit/boardedit.cpp \
     UI/w_deck/NewCell/newcell.cpp \
     UI/w_deck/NewTab/newtab.cpp \
@@ -20,19 +20,21 @@ SOURCES += \
     UI/w_decklist/decklist.cpp \
     UI/w_login/loginwindow.cpp \
     UI/w_reg/registration.cpp \
+    domain/domain.cpp \
     main.cpp
 
 HEADERS += \
+    data/includes/json.hpp\
+    domain/database.h \
     UI/w_boardedit/boardedit.h \
     UI/w_deck/NewCell/newcell.h \
     UI/w_deck/NewTab/newtab.h \
-    nlohmann/json.hpp \
-    Database/database.h \
     UI/w_createdeck/createdeck.h \
     UI/w_deck/deck.h \
     UI/w_decklist/decklist.h \
     UI/w_login/loginwindow.h \
-    UI/w_reg/registration.h
+    UI/w_reg/registration.h \
+    domain/domain.h
 
 FORMS += \
     UI/w_boardedit/boardedit.ui \
@@ -53,5 +55,5 @@ DISTFILES += \
     text.txt
 
 RESOURCES += \
-    other/resource.qrc
+    data/other/resource.qrc
 

@@ -2,7 +2,7 @@
 #include "ui_newtab.h"
 #include "UI/w_decklist/decklist.h"
 #include "UI/w_deck/deck.h"
-#include "Database/database.h"
+#include "domain/database.h"
 
 #include "QMessageBox"
 

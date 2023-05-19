@@ -3,7 +3,7 @@
 #include "ui_deck.h"
 #include "UI\w_createdeck\createdeck.h"
 #include "UI\w_deck\deck.h"
-#include "Database/database.h"
+#include "domain/database.h"
 
 Deck *DeckList::OpenedBoard;
 

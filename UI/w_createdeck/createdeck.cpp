@@ -1,6 +1,6 @@
 #include "createdeck.h"
 #include "ui_createdeck.h"
-#include "Database/database.h"
+#include "domain/database.h"
 #include "UI\w_decklist\decklist.h"
 #include "ui_decklist.h"
 #include "UI/w_login/loginwindow.h"

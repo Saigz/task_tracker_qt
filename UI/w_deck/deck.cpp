@@ -2,7 +2,7 @@
 #include "ui_deck.h"
 #include <UI/w_login/loginwindow.h>
 #include "UI/w_boardedit/boardedit.h"
-#include "Database/database.h"
+#include "domain/database.h"
 #include "QInputDialog"
 
 Deck::Deck(QWidget *parent) :

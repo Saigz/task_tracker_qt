@@ -1,11 +1,10 @@
 #include "UI\w_login\loginwindow.h"
-#include "Database/database.h"
-#include "UI/w_deck/deck.h"
 #include <QApplication>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <QStyleFactory>
+#include "domain/database.h"
 
 
 /*

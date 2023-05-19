@@ -17,7 +17,7 @@ json::array_t Database::ParsedBoards;
 
 void Database::ParseUserData() {
     std::cout << "Initialize parsing user data..." << std::endl;
-    std::ifstream f("../task_tracker_qt/Database/users.json");
+    std::ifstream f("../task_tracker_qt/data/users.json");
     json jsnData = nlohmann::json::parse(f);
     for (auto User : jsnData["users"]) {
         ParsedUsers.push_back(User);
@@ -28,7 +28,7 @@ void Database::ParseUserData() {
 
 void Database::UserDataToFile() {
     std::cout << "Initialize writing user data to file..." << std::endl;
-    std::ofstream file("../task_tracker_qt/Database/users.json");
+    std::ofstream file("../task_tracker_qt/data/users.json");
     json jsnObj;
     jsnObj["users"] = ParsedUsers;
     file << std::setw(4) << jsnObj << std::endl;
@@ -97,7 +97,7 @@ int Database::AddUser(QString Login, QString Password) {
 
 void Database::ParseBoardsData() {
     std::cout << "Initialize parsing boards data..." << std::endl;
-    std::ifstream f("../task_tracker_qt/Database/boards.json");
+    std::ifstream f("../task_tracker_qt/data/boards.json");
     json jsnData = nlohmann::json::parse(f);
     for (auto Board : jsnData["boards"]) {
         ParsedBoards.push_back(Board);
@@ -108,7 +108,7 @@ void Database::ParseBoardsData() {
 
 void Database::BoardsDataToFile() {
     std::cout << "Initialize writing boards data to file..." << std::endl;
-    std::ofstream file("../task_tracker_qt/Database/boards.json");
+    std::ofstream file("../task_tracker_qt/data/boards.json");
     json jsnObj;
     jsnObj["boards"] = ParsedBoards;
     file << std::setw(4) << jsnObj << std::endl;

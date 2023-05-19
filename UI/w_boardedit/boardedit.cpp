@@ -1,7 +1,7 @@
 #include "boardedit.h"
 #include "ui_boardedit.h"
 #include "UI/w_decklist/decklist.h"
-#include "Database/database.h"
+#include "domain/database.h"
 
 #include <QRegularExpression>
 #include <QMessageBox>
