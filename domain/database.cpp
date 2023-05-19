@@ -51,6 +51,7 @@ int Database::FindUser(QString Login, QString Password) {
             if (User["Password"] == Password.toStdString()) {
 
                 std::cout << "Find, fully matched" << std::endl;
+                CurrentUser = User;
                 return 1;
 
             } else {
@@ -249,9 +250,8 @@ void Database::AddNewCardToColumn(QString BoardName, int ColumnIndex, QString Te
                     Card["CardName"] = "CardName";
                     Card["CardText"] = Text.toStdString();
                     Card["CardColor"] = "XXXXX";
-                    for (auto Own : Board["Owners"]) {
-                        Card["CardOwners"].push_back(Own);
-                    }
+                    json::array_t obj;
+                    Card["CardOwners"] = obj;
 
                     Column["Cards"].push_back(Card);
                     BoardsDataToFile();
@@ -284,6 +284,71 @@ void Database::DeleteCardFromColumn(QString BoardName, int ColumnIndex, int Card
                     return;
                 }
             }
+        }
+    }
+}
+
+void Database::RenameCardFromColumn(QString BoardName, int ColumnIndex, int CardIndex, QString NewCardName)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            Board["Columns"][ColumnIndex]["Cards"][CardIndex]["CardName"] = NewCardName.toStdString();
+            BoardsDataToFile();
+            return;
+
+        }
+    }
+}
+
+void Database::SetCardText(QString BoardName, int ColumnIndex, int CardIndex, QString NewText)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            Board["Columns"][ColumnIndex]["Cards"][CardIndex]["CardText"] = NewText.toStdString();
+            BoardsDataToFile();
+            return;
+
+        }
+    }
+}
+
+void Database::ChangeColorOfCard(QString BoardName, int ColumnIndex, int CardIndex, QString Color)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            Board["Columns"][ColumnIndex]["Cards"][CardIndex]["CardColor"] = Color.toStdString();
+            BoardsDataToFile();
+            return;
+        }
+    }
+}
+
+void Database::AddBoardOwnerToCard(QString BoardName)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+
+            //TODO
+
+
+            BoardsDataToFile();
+            return;
+        }
+    }
+}
+
+void Database::AddOwnerToCard(QString BoardName, int ColumnIndex, int CardIndex, QString NewOwner)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            Board["Columns"][ColumnIndex]["Cards"][CardIndex]["CardOwners"].push_back(NewOwner.toStdString());
+            BoardsDataToFile();
+            return;
         }
     }
 }

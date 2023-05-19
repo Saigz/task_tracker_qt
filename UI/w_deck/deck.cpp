@@ -3,6 +3,7 @@
 #include <UI/w_login/loginwindow.h>
 #include "UI/w_boardedit/boardedit.h"
 #include "domain/database.h"
+#include "domain/domain.h"
 #include "QInputDialog"
 
 
@@ -85,27 +86,37 @@ void Deck::addTab(QString ColumnName)
 
 void Deck::on_btn_add_column_clicked()
 {
-    addTab(QString("NewColumn").arg(ui->tabWidget->count()+1));
+    if (IfUserOwnerOfBoard(Database::GetCurrentBoard(), Database::GetCurrentUser()) == 1) {
+        addTab(QString("NewColumn").arg(ui->tabWidget->count()+1));
+    } else {
+        QMessageBox::warning(this, "acces denied", "у тебя нет доступа для редактирования этой доски");
+    }
 }
 
 
 void Deck::on_tabWidget_tabCloseRequested(int index)
 {
-    QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Delete Confirmation", "Delete This Tab?",QMessageBox::Yes|QMessageBox::No);
-    if (reply == QMessageBox::Yes){
-        qDebug()<<"Removing tab of index:"<<index;
-        allTabPtrs[index]->close();
-        ui->tabWidget->removeTab(index);
+    if (IfUserOwnerOfBoard(Database::GetCurrentBoard(), Database::GetCurrentUser()) == 1) {
 
-        allTabPtrs.remove(index);
-        Database::DeleteColumn(QString::fromStdString(jsnBoard["Name"]), index);
-    }
+        QMessageBox::StandardButton reply;
+        reply = QMessageBox::question(this, "Delete Confirmation", "Delete This Tab?",QMessageBox::Yes|QMessageBox::No);
+        if (reply == QMessageBox::Yes){
+            qDebug()<<"Removing tab of index:"<<index;
+            allTabPtrs[index]->close();
+            ui->tabWidget->removeTab(index);
 
-    if(allTabPtrs.length()==0){
-        addTab("Default");
-        Database::AddNewColumn(QString::fromStdString(jsnBoard["Name"]), "Default");
-        ui->statusBar->showMessage("Added Default Tab",3000);
+            allTabPtrs.remove(index);
+            Database::DeleteColumn(QString::fromStdString(jsnBoard["Name"]), index);
+        }
+
+        if(allTabPtrs.length()==0){
+            addTab("Default");
+            Database::AddNewColumn(QString::fromStdString(jsnBoard["Name"]), "Default");
+            ui->statusBar->showMessage("Added Default Tab",3000);
+        }
+
+    } else {
+        QMessageBox::warning(this, "acces denied", "у тебя нет доступа для редактирования этой доски");
     }
 }
 
@@ -118,17 +129,26 @@ void Deck::on_btn_back_clicked()
 
 void Deck::on_btn_edit_clicked()
 {
-    BoardEdit z;
-    z.exec();
+    if (IfUserOwnerOfBoard(Database::GetCurrentBoard(), Database::GetCurrentUser()) == 1) {
+        BoardEdit z;
+        z.exec();
+    } else {
+        QMessageBox::warning(this, "acces denied", "у тебя нет доступа для редактирования этой доски");
+    }
 }
 
 
 void Deck::on_btn_rename_tab_clicked()
 {
-    QString Text = QInputDialog::getText(this, "Enter new name", "Enter new name:", QLineEdit::Normal, "");
-    std::cout << ui->tabWidget->tabText(ui->tabWidget->currentIndex()).toStdString() << std::endl;
-    Database::RenameColumn(QString::fromStdString(jsnBoard["Name"]), ui->tabWidget->currentIndex(), Text);
-    ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), Text);
+
+    if (IfUserOwnerOfBoard(Database::GetCurrentBoard(), Database::GetCurrentUser()) == 1) {
+        QString Text = QInputDialog::getText(this, "Enter new name", "Enter new name:", QLineEdit::Normal, "");
+        std::cout << ui->tabWidget->tabText(ui->tabWidget->currentIndex()).toStdString() << std::endl;
+        Database::RenameColumn(QString::fromStdString(jsnBoard["Name"]), ui->tabWidget->currentIndex(), Text);
+        ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), Text);
+    } else {
+        QMessageBox::warning(this, "acces denied", "у тебя нет доступа для редактирования этой доски");
+    }
 }
 
 

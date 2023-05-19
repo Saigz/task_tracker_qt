@@ -21,6 +21,7 @@ public:
     int cellNumberTotal;
     QVector<NewCell*> allCellPtr;
 
+    void Swap(NewCell *First, NewCell *Second);
     void initCells();
 
 public slots:

@@ -32,12 +32,12 @@ void DeckList::on_btn_Open_clicked()
     QString BoardName = curr_item.text().split(" ").at(0);
     BoardName.chop(2);
     BoardName.remove(0, 1);
-    std::cout << BoardName.toStdString() << std::endl;
 
 
     OpenedBoard = new Deck();
     json Board = Database::FindBoard(BoardName);
     OpenedBoard->jsnBoard = Board;
+    Database::SetCurrentBoard(Board);
 
 
     QString BoardOwners;
@@ -45,9 +45,7 @@ void DeckList::on_btn_Open_clicked()
         BoardOwners += QString::fromStdString(Owners) + ", ";
     }
 
-    std::cout << Board["Name"] << "  " <<  Board["Type"] << "  " <<  BoardOwners.toStdString() << std::endl;
     OpenedBoard->setInfoLabels(QString::fromStdString(Board["Name"]), QString::fromStdString(Board["Type"]), BoardOwners);
-
     OpenedBoard->initTabs();
 
     this->close();
