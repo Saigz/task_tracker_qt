@@ -4,15 +4,6 @@
             "Columns": [
                 {
                     "Cards": [
-                        {
-                            "CardName": "",
-                            "CardText": "",
-                            "CardColor": "",
-                            "CardOwners": [
-
-                            ],
-
-                        },
                         "213123",
                         "312",
                         "132"
@@ -151,7 +142,16 @@
             "Type": "private"
         },
         {
-            "Columns": null,
+            "Columns": [
+                {
+                    "Cards": null,
+                    "ColumnName": "NewColumn"
+                },
+                {
+                    "Cards": null,
+                    "ColumnName": "Tab 1"
+                }
+            ],
             "Name": "123",
             "Owners": [
                 "123"
