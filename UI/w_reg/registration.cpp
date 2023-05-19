@@ -33,6 +33,7 @@ void Registration::on_btn_SignUp_pressed()
             int isSuccesfullyAdded = Database::AddUser(Login, Password);
             if (isSuccesfullyAdded) {
                 QMessageBox::information(this, "кайф", "Успешно зарегистрировался");
+                close();
             } else {
                 QMessageBox::warning(this, "печалька", "Занято, попутал ты чето");
             }

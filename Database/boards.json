@@ -9,7 +9,16 @@
                         "312",
                         "132"
                     ],
-                    "ColumnName": "asfd"
+                    "ColumnName": "HUY"
+                },
+                {
+                    "Cards": [
+                        "12345",
+                        "213123",
+                        "312",
+                        "newcardtext"
+                    ],
+                    "ColumnName": "SecondCol"
                 },
                 {
                     "Cards": [
@@ -55,7 +64,7 @@
             "Columns": [
                 {
                     "Cards": null,
-                    "ColumnName": "New name"
+                    "ColumnName": "sad"
                 },
                 {
                     "Cards": null,

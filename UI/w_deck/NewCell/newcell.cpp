@@ -21,7 +21,6 @@ void NewCell::setTextData(QString cellText){
 
 void NewCell::on_deleteButton_clicked()
 {
-    QMessageBox::StandardButton reply;
     emit closeThisCell(CellNumber);
 }
 

@@ -5,11 +5,6 @@
 #include "ui_decklist.h"
 #include "UI/w_login/loginwindow.h"
 
-#include <QRegularExpression>
-#include <QMessageBox>
-
-
-
 CreateDeck::CreateDeck(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CreateDeck)

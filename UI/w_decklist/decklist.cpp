@@ -4,8 +4,6 @@
 #include "UI\w_createdeck\createdeck.h"
 #include "UI\w_deck\deck.h"
 #include "Database/database.h"
-#include "QMessageBox"
-
 
 Deck *DeckList::OpenedBoard;
 
@@ -16,7 +14,6 @@ DeckList::DeckList(QWidget *parent) :
 
     OpenedBoard = new Deck();
     ui->setupUi(this);
-
 
     UpdateBoards();
 }
@@ -32,7 +29,6 @@ void DeckList::on_btn_Open_clicked()
 {
     QListWidgetItem curr_item;
     curr_item = *ui->listWidget->item(ui->listWidget->currentRow());
-    curr_item.text(); //  string name of current item (надо как то его дать в некст окно)
     QString BoardName = curr_item.text().split(" ").at(0);
     BoardName.chop(2);
     BoardName.remove(0, 1);
@@ -80,12 +76,10 @@ void DeckList::UpdateBoards() {
 
 void DeckList::on_btn_Create_pressed()
 {
-    CreateDeck window;
-    window.setModal(true);
-    window.exec(); // open create deck window
+    CreateDeck create_deck_window;
+    create_deck_window.setModal(true);
+    create_deck_window.exec(); // open create deck window
 }
-
-
 
 void DeckList::on_btn_Delete_pressed()
 {
@@ -100,8 +94,6 @@ void DeckList::on_btn_Delete_pressed()
         ui->listWidget->takeItem(ui->listWidget->currentRow()); // delete current item
     }
 }
-
-
 
 void DeckList::on_btn_Exit_pressed()
 {

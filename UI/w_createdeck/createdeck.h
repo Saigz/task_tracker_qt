@@ -2,6 +2,9 @@
 #define CREATEDECK_H
 
 #include <QDialog>
+#include <QRegularExpression>
+#include <QMessageBox>
+
 
 namespace Ui {
 class CreateDeck;

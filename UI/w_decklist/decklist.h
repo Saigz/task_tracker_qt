@@ -2,6 +2,8 @@
 #define DECKLIST_H
 
 #include "UI\w_deck\deck.h"
+
+#include "QMessageBox"
 #include <QMainWindow>
 #include <QListWidgetItem>
 #include <vector>
