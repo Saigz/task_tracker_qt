@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1153</width>
-    <height>128</height>
+    <width>300</width>
+    <height>520</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="deleteButton">
    <property name="geometry">
     <rect>
-     <x>950</x>
-     <y>20</y>
-     <width>191</width>
-     <height>100</height>
+     <x>10</x>
+     <y>280</y>
+     <width>281</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -49,9 +49,9 @@ QPushButton:focus {
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
-     <width>931</width>
-     <height>101</height>
+     <y>50</y>
+     <width>281</width>
+     <height>221</height>
     </rect>
    </property>
    <property name="styleSheet">

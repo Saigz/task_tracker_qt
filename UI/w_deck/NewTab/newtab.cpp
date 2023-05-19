@@ -30,7 +30,7 @@ void NewTab::addNewCell(QString cellText, QString cellName)
         QMessageBox::warning(this, "Cant create", "Too much cards, maximum 4");
     } else {
         NewCell *newCell = new NewCell(this);
-        ui->cellLayout->addWidget(newCell, cellNumberTotal, 0);
+        ui->cellLayout->addWidget(newCell, 0,  cellNumberTotal);
         connect(newCell,SIGNAL(closeThisCell(int)),this,SLOT(closeCell(int)));
         newCell->setAttribute(Qt::WA_DeleteOnClose, true);
         newCell->CellNumber = cellNumberTotal;
