@@ -2,6 +2,7 @@
 #include "ui_boardedit.h"
 #include "UI/w_decklist/decklist.h"
 #include "domain/database.h"
+#include "domain/domain.h"
 
 #include <QRegularExpression>
 #include <QMessageBox>
@@ -11,6 +12,15 @@ BoardEdit::BoardEdit(QWidget *parent) :
     ui(new Ui::BoardEdit)
 {
     ui->setupUi(this);
+
+    QString Type = QString::fromStdString(DeckList::OpenedBoard->jsnBoard["Type"]);
+    if (Type == "private") {
+        ui->radioButton_private->setChecked(true);
+        ui->radioButton_public->setChecked(false);
+    } else if (Type == "public") {
+        ui->radioButton_private->setChecked(false);
+        ui->radioButton_public->setChecked(true);
+    }
 }
 
 BoardEdit::~BoardEdit()
@@ -44,7 +54,7 @@ void BoardEdit::on_btn_Owner_clicked()
                 BoardOwners += QString::fromStdString(Owners) + ", ";
             }
             Database::AddOwnerToBoard(QString::fromStdString(DeckList::OpenedBoard->jsnBoard["Name"]), new_owner);
-            DeckList::OpenedBoard->addBoardOwner(BoardOwners);
+            DeckList::OpenedBoard->setBoardOwners(BoardOwners);
         }
     }
 
@@ -83,16 +93,37 @@ void BoardEdit::on_btn_Type_clicked()
 
 void BoardEdit::on_btn_Back_clicked()
 {
-    QString Type;
-
-    if (ui->radioButton_private->isChecked()) {
-        Type = "private";
-    } else if (ui->radioButton_public->isChecked()) {
-        Type = "public";
-    }
-
-    // db code
-
-
     close();
 }
+
+void BoardEdit::on_btn_del_owner_clicked()
+{
+    QString del_owner = ui->lineEdit_del_owner->text();
+    if (InputValidation(del_owner) == 0 and Database::FindUser(del_owner, "x") == 0) {
+        QMessageBox::warning(this, "govno nabral", "запрещенные символы или пустая строка или пользователя не существует" );
+    } else {
+        if (DeckList::OpenedBoard->jsnBoard["Owners"].size() < 2) {
+            QMessageBox::warning(this, "afsd", "нельзя удалить последнего владельца доски" );
+            return;
+        }
+        int i = 0;
+        for (auto own : DeckList::OpenedBoard->jsnBoard["Owners"]) {
+            if (own == del_owner.toStdString()) {
+
+                QString BoardOwners;
+                DeckList::OpenedBoard->jsnBoard["Owners"].erase(DeckList::OpenedBoard->jsnBoard["Owners"].begin() + i);
+                for (auto Owners : DeckList::OpenedBoard->jsnBoard["Owners"]) {
+                    BoardOwners += QString::fromStdString(Owners) + ", ";
+                }
+                Database::DeleteOwnerFromBoard(QString::fromStdString(DeckList::OpenedBoard->jsnBoard["Name"]), del_owner);
+                DeckList::OpenedBoard->setBoardOwners(BoardOwners);
+                QMessageBox::warning(this, "успех", "успешно удалили владельца доски" );
+                return;
+            }
+            i++;
+        }
+        QMessageBox::warning(this, "govno nabral", "пользователь итак не владеет доской" );
+        return;
+    }
+}
+

@@ -40,20 +40,22 @@ void Deck::setBoardName(QString Name)
 {
     ui->Name_label->text().clear();
     ui->Name_label->setText("Name: " + Name);
+
 }
 
 void Deck::setBoardPrivacyType(QString Type)
 {
     ui->Type_label->text().clear();
     ui->Type_label->setText("Privacy type: " + Type);
+
 }
 
-void Deck::addBoardOwner(QString Owners)
+void Deck::setBoardOwners(QString Owners)
 {
-
     ui->Owners_label->text().clear();
     ui->Owners_label->setText("Owners: " + Owners);
 }
+
 
 void Deck::initTabs()
 {
@@ -77,7 +79,7 @@ void Deck::addTab(QString ColumnName)
     NewTabPtr->setAttribute(Qt::WA_DeleteOnClose, true);
     allTabPtrs.append(NewTabPtr);
 
-    Database::AddNewColumn(QString::fromStdString(DeckList::OpenedBoard->jsnBoard["Name"]), ColumnName);
+    Database::AddNewColumn(QString::fromStdString(jsnBoard["Name"]), ColumnName);
 }
 
 

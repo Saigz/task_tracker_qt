@@ -99,13 +99,14 @@
                     "ColumnName": "3fd4gsdfg"
                 }
             ],
-            "Name": "BIB",
+            "Name": "BOB",
             "Owners": [
-                "BOBA",
                 "123",
-                "notfound"
+                "notfound",
+                "BOBA",
+                "1234"
             ],
-            "Type": "public"
+            "Type": "private"
         }
     ]
 }

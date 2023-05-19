@@ -40,7 +40,7 @@ public:
     void setMaxCardLabel(int Count);
     void setBoardName(QString Name);
     void setBoardPrivacyType(QString);
-    void addBoardOwner(QString);
+    void setBoardOwners(QString);
 
 signals:
     void deck_list();
