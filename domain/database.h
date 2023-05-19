@@ -67,13 +67,18 @@ public:
     static void ChangeBoardName(QString BoardName, QString NewBoardName);
     static void ChangeBoardType(QString BoardName, QString Type);
     static void AddOwnerToBoard(QString BoardName, QString NewOwnerLogin);
+    static void DeleteOwnerFromBoard(QString BoardName, QString OwnerLogin);
 
     static void AddNewColumn(QString BoardName, QString ColumnName);
     static void RenameColumn(QString BoardName, int Index, QString NewColumnName);
     static void DeleteColumn(QString BoardName, int Index);
 
     static void AddNewCardToColumn(QString BoardName, int ColumnIndex, QString Text);
-
+    static void DeleteCardFromColumn(QString BoardName, int ColumnIndex, int CardIndex);
+    static void RenameCardFromColumn(QString BoardName, int ColumnIndex, int CardIndex, QString NewCardName); //
+    static void ChangeColorOfCardFromColumn(QString BoardName, int ColumnIndex, int CardIndex, QString Colour); //
+    static void AddOwnersToCard(QString BoardName, int ColumnIndex, int CardIndex, QString NewOwner); //
+    static void DeleteOwnerFromCard(QString BoardName, int ColumnIndex, int CardIndex, QString OwnerToDel); //
 
 //------------------optional------------------------------------------
 

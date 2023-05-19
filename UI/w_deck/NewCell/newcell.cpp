@@ -2,6 +2,9 @@
 #include "ui_newcell.h"
 #include "UI/w_chooselist/chooselist.h"
 #include "UI/w_deck/NewCell/w_chooseposition/chooseposition.h"
+#include "domain/database.h"
+#include "UI/w_decklist/decklist.h"
+#include "UI/w_deck/deck.h"
 
 NewCell::NewCell(QWidget *parent) :
     QWidget(parent),
@@ -39,6 +42,7 @@ void NewCell::setTextData(QString cellText){
 
 void NewCell::on_deleteButton_clicked()
 {
+    Database::DeleteCardFromColumn(QString::fromStdString(DeckList::OpenedBoard->jsnBoard["Name"]), Deck::TabIndex, CellNumber);
     emit closeThisCell(CellNumber);
 }
 

@@ -15,6 +15,7 @@
         btn.pressed -> btn.clicked
         jsnBoard and OpenedBoard does not affected by inner class changes
 
+        board owner button to boardedit
         BoardEdit multi fix
         Card management
         Pictures Management
@@ -32,8 +33,9 @@ int main(int argc, char *argv[])
     Database::ParseUserData();
 
 
-    //Database::AddNewCardToColumn("BIB", 5, "12345678");
-    //Database::DeleteColumn("BIB", 1);
+    //Database::AddNewCardToColumn("BIB", 3, "NewNeWnEw");
+    //Database::DeleteOwnerFromBoard("BIB", "notfound");
+    //Database::DeleteCardFromColumn("BIB", 0, 0);
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("Fusion"));
     LoginWindow w;

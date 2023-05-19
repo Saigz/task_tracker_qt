@@ -32,16 +32,15 @@ public:
     //json board object
     nlohmann::json jsnBoard;
 
-
     void addTab(QString ColumnName);
     void initTabs();
 
-
+    static int TabIndex;
     void setInfoLabels(QString Name, QString Type, QString Owners);
     void setMaxCardLabel(int Count);
     void setBoardName(QString Name);
     void setBoardPrivacyType(QString);
-    void addBoardOwner(QString);
+    void setBoardOwners(QString);
 
 signals:
     void deck_list();
@@ -57,6 +56,8 @@ private slots:
     void on_btn_edit_clicked();
 
     void on_btn_rename_tab_clicked();
+
+    void on_tabWidget_currentChanged(int index);
 
 private:
     Ui::Deck *ui;

@@ -25,6 +25,8 @@ private slots:
 
     void on_btn_Type_clicked();
 
+    void on_btn_del_owner_clicked();
+
 private:
     Ui::BoardEdit *ui;
 };

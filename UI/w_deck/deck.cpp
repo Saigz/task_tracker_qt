@@ -5,6 +5,10 @@
 #include "domain/database.h"
 #include "QInputDialog"
 
+
+int Deck::TabIndex = 0;
+
+
 Deck::Deck(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Deck)
@@ -36,20 +40,22 @@ void Deck::setBoardName(QString Name)
 {
     ui->Name_label->text().clear();
     ui->Name_label->setText("Name: " + Name);
+
 }
 
 void Deck::setBoardPrivacyType(QString Type)
 {
     ui->Type_label->text().clear();
     ui->Type_label->setText("Privacy type: " + Type);
+
 }
 
-void Deck::addBoardOwner(QString Owners)
+void Deck::setBoardOwners(QString Owners)
 {
-
     ui->Owners_label->text().clear();
     ui->Owners_label->setText("Owners: " + Owners);
 }
+
 
 void Deck::initTabs()
 {
@@ -60,11 +66,11 @@ void Deck::initTabs()
 
         allTabPtrs.append(NewTabPtr);
 
-        for (auto Card : jsnBoard["Columns"][ColumnIndex]["Cards"]) {
-            NewTabPtr->addNewCell(QString::fromStdString(Card["CardText"]), QString::fromStdString(Card["CardName"]));
-        }
+        NewTabPtr->initCells();
     }
+    TabIndex = 0;
 }
+
 
 void Deck::addTab(QString ColumnName)
 {
@@ -73,13 +79,15 @@ void Deck::addTab(QString ColumnName)
     NewTabPtr->setAttribute(Qt::WA_DeleteOnClose, true);
     allTabPtrs.append(NewTabPtr);
 
-    Database::AddNewColumn(QString::fromStdString(DeckList::OpenedBoard->jsnBoard["Name"]), ColumnName);
+    Database::AddNewColumn(QString::fromStdString(jsnBoard["Name"]), ColumnName);
 }
+
 
 void Deck::on_btn_add_column_clicked()
 {
     addTab(QString("NewColumn").arg(ui->tabWidget->count()+1));
 }
+
 
 void Deck::on_tabWidget_tabCloseRequested(int index)
 {
@@ -108,7 +116,6 @@ void Deck::on_btn_back_clicked()
 }
 
 
-
 void Deck::on_btn_edit_clicked()
 {
     BoardEdit z;
@@ -122,5 +129,11 @@ void Deck::on_btn_rename_tab_clicked()
     std::cout << ui->tabWidget->tabText(ui->tabWidget->currentIndex()).toStdString() << std::endl;
     Database::RenameColumn(QString::fromStdString(jsnBoard["Name"]), ui->tabWidget->currentIndex(), Text);
     ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), Text);
+}
+
+
+void Deck::on_tabWidget_currentChanged(int index)
+{
+    TabIndex = index;
 }
 
