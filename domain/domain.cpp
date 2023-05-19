@@ -43,3 +43,35 @@ void SignUp(Ui::Registration *ui, Registration *obj)
         }
     }
 }
+
+int IfUserOwnerOfBoard(json Board, json User)
+{
+
+    if (Board["Type"] == "private") {
+        for (auto Owner : Board["Owners"]) {
+            std::cout << User <<  "   " << Owner << std::endl;
+            if (User["Login"] == Owner) {
+                std::cout << "User is owner" << std::endl;
+                return 1;
+            }
+        }
+        return 0;
+    } else if (Board["Type"] == "public") {
+        return 1;
+    }
+
+}
+
+int IfUserOwnerOfCard(json Board, int ColumnIndex, int CardIndex, json User)
+{
+    if (IfUserOwnerOfBoard(Board, User) == 0) {
+        for (auto cardOwn : Board["Columns"][ColumnIndex]["Cards"][CardIndex]["CardOwners"]) {
+            if (cardOwn == User["Login"]) {
+                return 1;
+            }
+        }
+        return 0;
+    } else {
+        return 1;
+    }
+}

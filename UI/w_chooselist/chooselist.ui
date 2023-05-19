@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>673</width>
-    <height>399</height>
+    <width>298</width>
+    <height>301</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,9 @@
   <widget class="QLabel" name="label_unused">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>631</width>
+     <x>10</x>
+     <y>10</y>
+     <width>281</width>
      <height>41</height>
     </rect>
    </property>
@@ -41,10 +41,10 @@
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>80</x>
      <y>70</y>
-     <width>631</width>
-     <height>261</height>
+     <width>141</width>
+     <height>141</height>
     </rect>
    </property>
    <property name="font">
@@ -70,31 +70,31 @@ QListWidget::item:focus {
    </property>
    <item>
     <property name="text">
-     <string>Красный</string>
+     <string>Red</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Синий</string>
+     <string>Blue</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Черный</string>
+     <string>Black</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Зеленый</string>
+     <string>Green</string>
     </property>
    </item>
   </widget>
   <widget class="QPushButton" name="btn_choose">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>340</y>
-     <width>321</width>
+     <x>70</x>
+     <y>220</y>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
@@ -124,9 +124,9 @@ QPushButton:focus {
   <widget class="QPushButton" name="btn_close">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>340</y>
-     <width>301</width>
+     <x>80</x>
+     <y>260</y>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>

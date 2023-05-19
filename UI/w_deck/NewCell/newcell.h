@@ -15,13 +15,16 @@ class NewCell : public QWidget
 public:
     explicit NewCell(QWidget *parent = nullptr);
     ~NewCell();
+
     int CellNumber;
     QString getTextData();
     QString getCellName();
 
 
-    void setTextData(QString cellText);
-    void setCellName(QString cellName);
+    void setColor(QString Color = "Green");
+    void setTextData(QString cellText = "Write here something!");
+    void setCellName(QString cellName = "New Card");
+    void setCoowners(QString Coowners);
 
 private:
     Ui::NewCell *ui;
@@ -36,6 +39,8 @@ private slots:
     void on_btn_color_clicked();
     void on_btn_coowner_clicked();
     void on_btn_position_clicked();
+    void on_btn_savetext_clicked();
+    void on_btn_rename_clicked();
 };
 
 #endif // NEWCELL_H
