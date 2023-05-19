@@ -48,10 +48,7 @@ void DeckList::on_btn_Open_clicked()
     std::cout << Board["Name"] << "  " <<  Board["Type"] << "  " <<  BoardOwners.toStdString() << std::endl;
     OpenedBoard->setInfoLabels(QString::fromStdString(Board["Name"]), QString::fromStdString(Board["Type"]), BoardOwners);
 
-    for (auto i : Board["Columns"]) {
-
-        OpenedBoard->initTabs(QString::fromStdString(i["ColumnName"]));
-    }
+    OpenedBoard->initTabs();
 
     this->close();
     OpenedBoard->show();
