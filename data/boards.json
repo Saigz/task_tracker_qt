@@ -28,9 +28,9 @@
                             "CardColor": "XXXXX",
                             "CardName": "CardName",
                             "CardOwners": [
+                                "notfound",
                                 "BOBA",
-                                "123",
-                                "notfound"
+                                "1234"
                             ],
                             "CardText": "CellText"
                         },
@@ -38,9 +38,9 @@
                             "CardColor": "XXXXX",
                             "CardName": "CardName",
                             "CardOwners": [
+                                "notfound",
                                 "BOBA",
-                                "123",
-                                "notfound"
+                                "1234"
                             ],
                             "CardText": "CellText"
                         }
@@ -101,7 +101,6 @@
             ],
             "Name": "BOB",
             "Owners": [
-                "123",
                 "notfound",
                 "BOBA",
                 "1234"
