@@ -39,7 +39,6 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("Fusion"));
     a.setStyleSheet("QMessageBox {"
-                        "background-color: Black;"
                         "font: 600 10pt Montserrat SemiBold;"
                     "}"
                     "QMessageBox QPushButton {"
@@ -51,7 +50,6 @@ int main(int argc, char *argv[])
                         "font: 600 10pt Montserrat SemiBold;"
                     "}"
                     "QInputDialog {"
-                        "background-color: Black;"
                         "font: 600 10pt Montserrat SemiBold;"
                     "}"
                     "QInputDialog QPushButton {"
@@ -67,8 +65,6 @@ int main(int argc, char *argv[])
                         "border-radius: 8px;"
                         "padding-left: auto;"
                         "padding-right: auto;"
-                        "color: rgb(255, 255, 255);"
-                        "background-color: rgb(27, 29, 35);"
                         "font: 600 10pt Montserrat SemiBold;"
                     "}"
                     );
