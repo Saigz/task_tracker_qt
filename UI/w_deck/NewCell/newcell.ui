@@ -43,7 +43,7 @@ QTextEdit:focus {
 </string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -164,8 +164,12 @@ QPushButton:focus {
      </widget>
     </item>
    </layout>
+   <zorder>btn_color</zorder>
+   <zorder>btn_coowner</zorder>
+   <zorder>btn_position</zorder>
+   <zorder>deleteButton</zorder>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
