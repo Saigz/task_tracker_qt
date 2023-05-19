@@ -6,21 +6,23 @@
                     "Cards": [
                         {
                             "CardColor": "XXXXX",
-                            "CardName": "NewCard",
+                            "CardName": "CardName",
                             "CardOwners": [
-                                "1234",
+                                "BOBA",
+                                "123",
                                 "notfound"
                             ],
-                            "CardText": "CardText123"
+                            "CardText": "CellText"
                         },
                         {
                             "CardColor": "XXXXX",
-                            "CardName": "N3ewCard",
+                            "CardName": "CardName",
                             "CardOwners": [
-                                "1234",
+                                "BOBA",
+                                "123",
                                 "notfound"
                             ],
-                            "CardText": "Car3dText123"
+                            "CardText": "CellText"
                         },
                         {
                             "CardColor": "XXXXX",
@@ -94,52 +96,7 @@
                             "CardText": "NewNeWnEw"
                         }
                     ],
-                    "ColumnName": "ABSDBF"
-                },
-                {
-                    "Cards": [
-                        {
-                            "CardColor": "XXXXX",
-                            "CardName": "CardName",
-                            "CardOwners": [
-                                "BOBA",
-                                "123",
-                                "notfound"
-                            ],
-                            "CardText": "CellText"
-                        },
-                        {
-                            "CardColor": "XXXXX",
-                            "CardName": "CardName",
-                            "CardOwners": [
-                                "BOBA",
-                                "123",
-                                "notfound"
-                            ],
-                            "CardText": "CellText"
-                        },
-                        {
-                            "CardColor": "XXXXX",
-                            "CardName": "CardName",
-                            "CardOwners": [
-                                "BOBA",
-                                "123",
-                                "notfound"
-                            ],
-                            "CardText": "CellText"
-                        },
-                        {
-                            "CardColor": "XXXXX",
-                            "CardName": "CardName",
-                            "CardOwners": [
-                                "BOBA",
-                                "123",
-                                "notfound"
-                            ],
-                            "CardText": "CellText"
-                        }
-                    ],
-                    "ColumnName": "NewColumn"
+                    "ColumnName": "3fd4gsdfg"
                 }
             ],
             "Name": "BIB",

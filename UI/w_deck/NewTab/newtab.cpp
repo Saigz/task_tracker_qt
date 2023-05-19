@@ -74,5 +74,6 @@ void NewTab::closeCell(int index)
     cellNumberTotal--;
     allCellPtr.remove(index);
 
+
     DeckList::OpenedBoard->setMaxCardLabel(cellNumberTotal);
 }

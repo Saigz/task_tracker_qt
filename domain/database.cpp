@@ -265,6 +265,30 @@ void Database::AddNewCardToColumn(QString BoardName, int ColumnIndex, QString Te
     }
 }
 
+void Database::DeleteCardFromColumn(QString BoardName, int ColumnIndex, int CardIndex)
+{
+
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            if (Board["Columns"].size() < ColumnIndex) {
+                return;
+            } else {
+
+                if (Board["Columns"][ColumnIndex]["Cards"].size() < CardIndex) {
+                    return;
+                } else {
+
+                    Board["Columns"][ColumnIndex]["Cards"].erase(Board["Columns"][ColumnIndex]["Cards"].begin() + CardIndex);
+                    BoardsDataToFile();
+                    return;
+                }
+            }
+        }
+    }
+}
+
+
 void Database::RenameColumn(QString BoardName, int Index, QString NewColumnName)
 {
     int ind = 0;
@@ -306,6 +330,27 @@ void Database::AddOwnerToBoard(QString BoardName, QString NewOwnerLogin) {
     for (auto & Board : ParsedBoards) {
         if (Board["Name"] == BoardName.toStdString()) {
             Board["Owners"].push_back(NewOwnerLogin.toStdString());
+            BoardsDataToFile();
+            return;
+        }
+    }
+}
+
+void Database::DeleteOwnerFromBoard(QString BoardName, QString OwnerLogin)
+{
+    for (auto & Board : ParsedBoards) {
+        if (Board["Name"] == BoardName.toStdString()) {
+
+            int i = 0;
+            for (auto & Owner : Board["Owners"]) {
+
+                if (Owner == OwnerLogin.toStdString()) {
+                    Board["Owners"].erase(Board["Owners"].begin() + i);
+                }
+                i++;
+            }
+
+
             BoardsDataToFile();
             return;
         }
