@@ -47,6 +47,13 @@
      <height>261</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Montserrat SemiBold</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QListWidget {
 	color: rgb(0, 0, 0);
@@ -61,6 +68,26 @@ QListWidget::item:focus {
 
 </string>
    </property>
+   <item>
+    <property name="text">
+     <string>Красный</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Синий</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Черный</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Зеленый</string>
+    </property>
+   </item>
   </widget>
   <widget class="QPushButton" name="btn_choose">
    <property name="geometry">

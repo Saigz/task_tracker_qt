@@ -10,6 +10,20 @@ NewCell::NewCell(QWidget *parent) :
     ui->setupUi(this);
 
 
+//    if (color == "black") {
+//        ui->label_cell_color->setStyleSheet("background-color: black");
+//    } else if (color == "red") {
+//        ui->label_cell_color->setStyleSheet("background-color: red");
+//    } else if (color == "green") {
+//        ui->label_cell_color->setStyleSheet("background-color: green");
+//    } else if (color == "blue") {
+//        ui->label_cell_color->setStyleSheet("background-color: blue");
+//    }
+
+
+
+
+
 }
 
 NewCell::~NewCell()

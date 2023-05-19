@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(254, 200, 255);</string>
+  </property>
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
@@ -206,6 +209,32 @@ QPushButton:focus {
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_cell_color">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>20</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	border: 2px solid rgb(156, 132, 192);
+	border-radius: 20px;
+	color: rgb(255, 255, 255);
+	background-color: #FFF;
+	font: 600 11pt &quot;Montserrat SemiBold&quot;;
+}
+
+
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <tabstops>
