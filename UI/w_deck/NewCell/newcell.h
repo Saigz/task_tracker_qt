@@ -33,6 +33,9 @@ signals:
 private slots:
 
     void on_deleteButton_clicked();
+    void on_btn_color_clicked();
+    void on_btn_coowner_clicked();
+    void on_btn_position_clicked();
 };
 
 #endif // NEWCELL_H

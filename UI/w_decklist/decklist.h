@@ -23,8 +23,10 @@ public:
     static Deck *OpenedBoard;
     void UpdateBoards();
 
+
 signals:
     void login_window();
+
 
 private slots:
 

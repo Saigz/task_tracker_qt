@@ -2,6 +2,7 @@
 #define LOGINWINDOW_H
 
 #include "UI/w_decklist/decklist.h"
+#include "UI/w_reg/registration.h"
 
 #include <QMainWindow>
 #include <QMessageBox>
@@ -27,6 +28,8 @@ private slots:
 
 private:
     Ui::LoginWindow *ui;
+    Registration *reg_window;
+
 };
 
 

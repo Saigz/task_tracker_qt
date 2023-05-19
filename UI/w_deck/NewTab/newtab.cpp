@@ -52,6 +52,7 @@ void NewTab::addNewCell(QString cellText, QString cellName)
 
         NewCell *newCell = new NewCell(this);
         ui->cellLayout->addWidget(newCell, 0,  cellNumberTotal);
+        newCell->setStyleSheet("background-color: #FFF;");
         connect(newCell,SIGNAL(closeThisCell(int)),this,SLOT(closeCell(int)));
         newCell->setAttribute(Qt::WA_DeleteOnClose, true);
         newCell->CellNumber = cellNumberTotal;

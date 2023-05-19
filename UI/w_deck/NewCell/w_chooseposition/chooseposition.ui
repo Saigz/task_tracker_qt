@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>chooseposition</class>
+ <widget class="QDialog" name="chooseposition">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(254, 200, 255);</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>80</y>
+     <width>121</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 60px;
+ padding-left: auto;
+ padding-right: auto;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+}</string>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 25px;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+}</string>
+   </property>
+   <property name="text">
+    <string>Up</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>80</y>
+     <width>61</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 30px;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+}</string>
+   </property>
+   <property name="text">
+    <string>Right</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>80</y>
+     <width>61</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 30px;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+}</string>
+   </property>
+   <property name="text">
+    <string>Left</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>210</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 25px;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+}</string>
+   </property>
+   <property name="text">
+    <string>Down</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

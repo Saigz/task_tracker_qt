@@ -11,6 +11,8 @@ CONFIG += c++17
 
 
 SOURCES += \
+    UI/w_chooselist/chooselist.cpp \
+    UI/w_deck/NewCell/w_chooseposition/chooseposition.cpp \
     domain/database.cpp \
     UI/w_boardedit/boardedit.cpp \
     UI/w_deck/NewCell/newcell.cpp \
@@ -24,6 +26,8 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
+    UI/w_chooselist/chooselist.h \
+    UI/w_deck/NewCell/w_chooseposition/chooseposition.h \
     data/includes/json.hpp\
     domain/database.h \
     UI/w_boardedit/boardedit.h \
@@ -38,7 +42,9 @@ HEADERS += \
 
 FORMS += \
     UI/w_boardedit/boardedit.ui \
+    UI/w_chooselist/chooselist.ui \
     UI/w_deck/NewCell/newcell.ui \
+    UI/w_deck/NewCell/w_chooseposition/chooseposition.ui \
     UI/w_deck/NewTab/newtab.ui \
     UI/w_createdeck/createdeck.ui \
     UI/w_deck/deck.ui \

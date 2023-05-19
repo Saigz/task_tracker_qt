@@ -7,12 +7,19 @@ Registration::Registration(QWidget *parent) :
     ui(new Ui::Registration)
 {
     ui->setupUi(this);
+
 }
 
 Registration::~Registration()
 {
     delete ui;
 }
+
+void Registration::setData(QString login, QString password) {
+    ui->lineEdit_Login->setText(login);
+    ui->lineEdit_Password->setText(password);
+}
+
 
 void Registration::on_btn_SignUp_pressed()
 {

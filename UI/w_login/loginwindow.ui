@@ -26,14 +26,14 @@
    <string>TaskManager</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../other/resource.qrc">
+   <iconset resource="../../data/other/resource.qrc">
     <normaloff>:/res/windows.ico</normaloff>:/res/windows.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(254, 200, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>391</x>
@@ -232,7 +232,7 @@ QPushButton:focus {
   </widget>
  </widget>
  <resources>
-  <include location="../../other/resource.qrc"/>
+  <include location="../../data/other/resource.qrc"/>
  </resources>
  <connections/>
 </ui>
