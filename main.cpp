@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     Database::ParseUserData();
 
 
-    //Database::AddNewCardToColumn("BIB", 5, "12345678");
+    //Database::AddNewCardToColumn("BIB", 3, "NewNeWnEw");
     //Database::DeleteColumn("BIB", 1);
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("Fusion"));

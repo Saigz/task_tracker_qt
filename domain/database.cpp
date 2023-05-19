@@ -233,7 +233,6 @@ void Database::AddNewColumn(QString BoardName, QString ColumnName)
     }
 }
 
-
 void Database::AddNewCardToColumn(QString BoardName, int ColumnIndex, QString Text)
 {
     for (auto & Board : ParsedBoards) {
