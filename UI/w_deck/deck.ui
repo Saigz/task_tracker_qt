@@ -47,20 +47,21 @@
 	 color: rgb(0, 0, 0);
 }
 QTabWidget::pane {
-  border: 1px solid dark;
+  border: 1px solid rgb(0, 0, 0);
   top:-1px; 
   background: rgb(245, 245, 245);
 } 
 
 QTabBar::tab {
- color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   background: rgb(142, 127, 165);
-  border: 1px solid lightgray; 
+  border: 1px solid rgb(0, 0, 0); 
   padding: 15px;
 } 
 
 QTabBar::tab:selected { 
-  background: rgb(187, 159, 207);
+  background: rgb(254, 200, 255);
+  border: 1px solid rgb(0, 0, 0); 
   margin-bottom: -1px; 
 }</string>
     </property>

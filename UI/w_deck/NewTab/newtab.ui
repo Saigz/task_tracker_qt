@@ -46,7 +46,7 @@
  padding-left: auto;
     padding-right: auto;
  color: rgb(0, 0, 0);
- background-color: rgb(187, 159, 207);
+ background-color: rgb(165, 151, 195);
  font: 600 12pt &quot;Montserrat SemiBold&quot;;
 }
 QPushButton:hover {

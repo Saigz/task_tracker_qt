@@ -57,14 +57,28 @@ void NewCell::on_btn_color_clicked()
 void NewCell::setColor(QString Color)
 {
     if (Color == "Black") {
-        ui->label_cell_color->setStyleSheet("background-color: black");
+        ui->label_cell_color->setStyleSheet("background-color: rgb(0, 0, 0);"
+                                            "border: 2px solid rgb(156, 132, 192);"
+                                            "border-radius: 20px;");
     } else if (Color == "Red") {
-        ui->label_cell_color->setStyleSheet("background-color: red");
+        ui->label_cell_color->setStyleSheet("background-color: rgb(255, 24, 105);"
+                                            "border: 2px solid rgb(156, 132, 192);"
+                                            "border-radius: 20px;");
     } else if (Color == "Green") {
-        ui->label_cell_color->setStyleSheet("background-color: green");
+        ui->label_cell_color->setStyleSheet("background-color: rgb(153, 255, 75);"
+                                            "border: 2px solid rgb(156, 132, 192);"
+                                            "border-radius: 20px;");
     } else if (Color == "Blue") {
-        ui->label_cell_color->setStyleSheet("background-color: blue");
+        ui->label_cell_color->setStyleSheet("background-color: rgb(97, 143, 229);"
+                                            "border: 2px solid rgb(156, 132, 192);"
+                                            "border-radius: 20px;");
+    } else {
+        ui->label_cell_color->setStyleSheet("background-color: rgb(255, 255, 255);"
+                                            "border: 2px solid rgb(156, 132, 192);"
+                                            "border-radius: 20px;");
     }
+
+
 }
 
 

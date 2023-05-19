@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>272</width>
-    <height>550</height>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
     <rect>
      <x>10</x>
      <y>80</y>
-     <width>211</width>
+     <width>251</width>
      <height>241</height>
     </rect>
    </property>
@@ -46,224 +46,6 @@ QTextEdit:focus {
 </string>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>330</y>
-     <width>251</width>
-     <height>191</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>1</number>
-    </property>
-    <property name="sizeConstraint">
-     <enum>QLayout::SetFixedSize</enum>
-    </property>
-    <item>
-     <widget class="QPushButton" name="deleteButton">
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
- border: 2px solid  rgb(155, 144, 200);
- border-radius: 8px;
- padding-left: auto;
-    padding-right: auto;
- color: rgb(0, 0, 0);
- background-color: rgb(187, 159, 207);
- font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}
-QPushButton:hover {
- border: 2px solid rgb(156, 132, 192);
- background-color: rgb(156, 132, 192);
-}
-QPushButton:focus {
- border: 2px solid rgb(109, 86, 154);
-
-}</string>
-      </property>
-      <property name="text">
-       <string>Delete</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btn_color">
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
- border: 2px solid  rgb(155, 144, 200);
- border-radius: 8px;
- padding-left: auto;
-    padding-right: auto;
- color: rgb(0, 0, 0);
- background-color: rgb(187, 159, 207);
- font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}
-QPushButton:hover {
- border: 2px solid rgb(156, 132, 192);
- background-color: rgb(156, 132, 192);
-}
-QPushButton:focus {
- border: 2px solid rgb(109, 86, 154);
-
-}</string>
-      </property>
-      <property name="text">
-       <string>Change Color</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btn_position">
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
- border: 2px solid  rgb(155, 144, 200);
- border-radius: 8px;
- padding-left: auto;
-    padding-right: auto;
- color: rgb(0, 0, 0);
- background-color: rgb(187, 159, 207);
- font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}
-QPushButton:hover {
- border: 2px solid rgb(156, 132, 192);
- background-color: rgb(156, 132, 192);
-}
-QPushButton:focus {
- border: 2px solid rgb(109, 86, 154);
-
-}</string>
-      </property>
-      <property name="text">
-       <string>Change Position</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btn_coowner">
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
- border: 2px solid  rgb(155, 144, 200);
- border-radius: 8px;
- padding-left: auto;
-    padding-right: auto;
- color: rgb(0, 0, 0);
- background-color: rgb(187, 159, 207);
- font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}
-QPushButton:hover {
- border: 2px solid rgb(156, 132, 192);
- background-color: rgb(156, 132, 192);
-}
-QPushButton:focus {
- border: 2px solid rgb(109, 86, 154);
-
-}</string>
-      </property>
-      <property name="text">
-       <string>Choose CoOwner</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btn_rename">
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
- border: 2px solid  rgb(155, 144, 200);
- border-radius: 8px;
- padding-left: auto;
-    padding-right: auto;
- color: rgb(0, 0, 0);
- background-color: rgb(187, 159, 207);
- font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}
-QPushButton:hover {
- border: 2px solid rgb(156, 132, 192);
- background-color: rgb(156, 132, 192);
-}
-QPushButton:focus {
- border: 2px solid rgb(109, 86, 154);
-
-}</string>
-      </property>
-      <property name="text">
-       <string>Rename</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btn_savetext">
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
- border: 2px solid  rgb(155, 144, 200);
- border-radius: 8px;
- padding-left: auto;
-    padding-right: auto;
- color: rgb(0, 0, 0);
- background-color: rgb(187, 159, 207);
- font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}
-QPushButton:hover {
- border: 2px solid rgb(156, 132, 192);
- background-color: rgb(156, 132, 192);
-}
-QPushButton:focus {
- border: 2px solid rgb(109, 86, 154);
-
-}</string>
-      </property>
-      <property name="text">
-       <string>Save</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-   <zorder>btn_color</zorder>
-   <zorder>btn_coowner</zorder>
-   <zorder>btn_position</zorder>
-   <zorder>deleteButton</zorder>
-   <zorder>btn_savetext</zorder>
-   <zorder>btn_rename</zorder>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>211</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QLabel" name="cellname">
-      <property name="styleSheet">
-       <string notr="true">QLabel {
- color: rgb(0, 0, 0);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}</string>
-      </property>
-      <property name="text">
-       <string>CellName</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="coowner">
-      <property name="styleSheet">
-       <string notr="true">QLabel {
- color: rgb(0, 0, 0);
-	font: 600 12pt &quot;Montserrat SemiBold&quot;;
-}</string>
-      </property>
-      <property name="text">
-       <string>Coowner</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="label_cell_color">
    <property name="geometry">
     <rect>
@@ -274,20 +56,242 @@ QPushButton:focus {
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel {
-	border: 2px solid rgb(156, 132, 192);
-	border-radius: 20px;
-	color: rgb(255, 255, 255);
-	background-color: #FFF;
-	font: 600 11pt &quot;Montserrat SemiBold&quot;;
-}
-
-
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="coowner">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
+background-color: rgb(254, 200, 255);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>Coowner</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cellname">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+ color: rgb(0, 0, 0);
+background-color: rgb(254, 200, 255);
+	font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>CellName</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>330</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
+    padding-right: auto;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_coowner">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>420</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
+    padding-right: auto;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Choose CoOwner</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_color">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
+    padding-right: auto;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Change Color</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_rename">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
+    padding-right: auto;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Rename</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_position">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
+    padding-right: auto;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Change Position</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_savetext">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ border: 2px solid  rgb(155, 144, 200);
+ border-radius: 8px;
+ padding-left: auto;
+    padding-right: auto;
+ color: rgb(0, 0, 0);
+ background-color: rgb(187, 159, 207);
+ font: 600 12pt &quot;Montserrat SemiBold&quot;;
+}
+QPushButton:hover {
+ border: 2px solid rgb(156, 132, 192);
+ background-color: rgb(156, 132, 192);
+}
+QPushButton:focus {
+ border: 2px solid rgb(109, 86, 154);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Save</string>
    </property>
   </widget>
  </widget>
