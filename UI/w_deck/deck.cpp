@@ -51,18 +51,17 @@ void Deck::addBoardOwner(QString Owners)
     ui->Owners_label->setText("Owners: " + Owners);
 }
 
-void Deck::initTabs(QString ColumnName)
+void Deck::initTabs()
 {
-    NewTab *NewTabPtr = new NewTab(this);
-    ui->tabWidget->addTab(NewTabPtr, ColumnName);
-    NewTabPtr->setAttribute(Qt::WA_DeleteOnClose, true);
+    for (unsigned int ColumnIndex = 0; ColumnIndex < (unsigned int)jsnBoard["Columns"].size(); ColumnIndex++) {
+        NewTab *NewTabPtr = new NewTab(this);
+        ui->tabWidget->addTab(NewTabPtr, QString::fromStdString(jsnBoard["Columns"][ColumnIndex]["ColumnName"]));
+        NewTabPtr->setAttribute(Qt::WA_DeleteOnClose, true);
 
-    allTabPtrs.append(NewTabPtr);
-    for (auto Card : jsnBoard["Columns"]) {
-        if (Card["ColumnName"] == ColumnName.toStdString()) {
-            for (auto i : Card["Cards"]) {
-                NewTabPtr->addNewCell(QString::fromStdString(i), "Cellname");
-            }
+        allTabPtrs.append(NewTabPtr);
+
+        for (auto Card : jsnBoard["Columns"][ColumnIndex]["Cards"]) {
+            NewTabPtr->addNewCell(QString::fromStdString(Card["CardText"]), QString::fromStdString(Card["CardName"]));
         }
     }
 }
@@ -79,8 +78,7 @@ void Deck::addTab(QString ColumnName)
 
 void Deck::on_btn_add_column_clicked()
 {
-    Database::AddNewColumn(QString::fromStdString(jsnBoard["Name"]), "NewColumn");
-    addTab(QString("Tab %0").arg(ui->tabWidget->count()+1));
+    addTab(QString("NewColumn").arg(ui->tabWidget->count()+1));
 }
 
 void Deck::on_tabWidget_tabCloseRequested(int index)

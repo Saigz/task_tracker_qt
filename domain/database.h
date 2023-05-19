@@ -72,7 +72,7 @@ public:
     static void RenameColumn(QString BoardName, int Index, QString NewColumnName);
     static void DeleteColumn(QString BoardName, int Index);
 
-    static void AddNewCardToColumn(QString BoardName, QString ColumnName, QString Text);
+    static void AddNewCardToColumn(QString BoardName, int ColumnIndex, QString Text);
 
 
 //------------------optional------------------------------------------

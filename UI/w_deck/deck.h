@@ -34,7 +34,7 @@ public:
 
 
     void addTab(QString ColumnName);
-    void initTabs(QString ColumnName);
+    void initTabs();
 
 
     void setInfoLabels(QString Name, QString Type, QString Owners);
