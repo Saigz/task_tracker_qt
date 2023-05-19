@@ -12,9 +12,11 @@ LoginWindow::LoginWindow(QWidget *parent)
     , ui(new Ui::LoginWindow)
 {
     WindowList = new class::DeckList();
-    ui->setupUi(this);
-    connect(WindowList, &DeckList::login_window, this, &LoginWindow::show);
+    reg_window = new Registration();
 
+    ui->setupUi(this);
+
+    connect(WindowList, &DeckList::login_window, this, &LoginWindow::show);
 }
 
 LoginWindow::~LoginWindow()
@@ -59,8 +61,7 @@ void LoginWindow::on_btn_SignIn_pressed()
 
 void LoginWindow::on_btn_SignUp_pressed()
 {
-    Registration reg_window;
-    reg_window.setModal(true);
-    reg_window.exec();
+    reg_window->setData(ui->lineEdit_Login->text(), ui->lineEdit_Password->text());
+    reg_window->exec();
 }
 
