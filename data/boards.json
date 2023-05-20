@@ -18,7 +18,7 @@
                         },
                         {
                             "CardColor": "Blue",
-                            "CardName": "-%x-%x-%x\\n\\n\\n\\n",
+                            "CardName": "\\\\n\\n\\nn\\\\n-%s_%x-%x",
                             "CardOwners": [
                                 "Idioto"
                             ],
